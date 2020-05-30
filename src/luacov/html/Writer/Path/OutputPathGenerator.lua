@@ -67,9 +67,11 @@ function OutputPathGenerator:generateRelativePath(_fromFileSystemEntryCoverageDa
   local comparisonToFullPath = "/" .. toFullPathDirectory
 
   local relativePath = path.relpath(comparisonToFullPath, comparisonFromFullPath)
-  if (relativePath ~= "") then
-    relativePath = relativePath .. "/"
+  if (relativePath == "") then
+    relativePath = "."
   end
+
+  relativePath = relativePath .. "/"
 
   if (_includeBaseName) then
     relativePath = relativePath .. toFullPathBaseName
