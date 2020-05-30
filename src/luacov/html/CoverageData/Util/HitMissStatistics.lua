@@ -87,7 +87,14 @@ end
 -- @treturn float The calculated percentage of hit lines
 --
 function HitMissStatistics:calculateHitPercentage()
-  return (self.numberOfHits / (self.numberOfHits + self.numberOfMisses)) * 100
+
+  local totalNumberOfHittableLines = self.numberOfHits + self.numberOfMisses
+  if (totalNumberOfHittableLines == 0) then
+    return 0
+  else
+    return (self.numberOfHits / totalNumberOfHittableLines) * 100
+  end
+
 end
 
 
