@@ -33,6 +33,8 @@ TestFile.dependencyPaths = {
 }
 
 
+-- Public Methods
+
 ---
 -- Checks that an empty line can be added to a CoverageData.File.
 --

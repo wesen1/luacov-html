@@ -146,7 +146,7 @@ end
 function FileSystemEntry:getPathPartTemplateDataObjects()
 
   local pathPartTemplateDataObjects = {}
-  for _, directoryCoverageData in ipairs(self.fileSystemEntryCoverageData:calculatePathDirectoryCoverages(true)) do
+  for _, directoryCoverageData in ipairs(self.fileSystemEntryCoverageData:calculatePathDirectoryCoverages(true, false)) do
 
     table.insert(
       pathPartTemplateDataObjects,
