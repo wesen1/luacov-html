@@ -1,0 +1,3 @@
+.vagrant
+example/tests/coverage-report
+luacov.report.out

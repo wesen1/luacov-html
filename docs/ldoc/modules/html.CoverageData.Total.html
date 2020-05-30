@@ -1,0 +1,497 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<head>
+    <title>luacov-html documentation</title>
+    <link rel="stylesheet" href="../ldoc.css" type="text/css" />
+</head>
+<body>
+
+<div id="container">
+
+<div id="product">
+	<div id="product_logo"></div>
+	<div id="product_name"><big><b></b></big></div>
+	<div id="product_description"></div>
+</div> <!-- id="product" -->
+
+
+<div id="main">
+
+
+<!-- Menu -->
+
+<div id="navigation">
+<br/>
+<h1>luacov-html</h1>
+
+<ul>
+  <li><a href="../index.html">Index</a></li>
+</ul>
+
+<h2>Contents</h2>
+<ul>
+<li><a href="#Class_Total">Class Total </a></li>
+</ul>
+
+
+<h2>Modules</h2>
+<ul class="nowrap">
+  <li><a href="../modules/html.Configuration.html">html.Configuration</a></li>
+  <li><a href="../modules/html.CoverageData.Directory.html">html.CoverageData.Directory</a></li>
+  <li><a href="../modules/html.CoverageData.File.html">html.CoverageData.File</a></li>
+  <li><a href="../modules/html.CoverageData.FileSystemEntry.html">html.CoverageData.FileSystemEntry</a></li>
+  <li><a href="../modules/html.CoverageData.Line.html">html.CoverageData.Line</a></li>
+  <li><strong>html.CoverageData.Total</strong></li>
+  <li><a href="../modules/html.CoverageData.Util.FilePathNormalizer.html">html.CoverageData.Util.FilePathNormalizer</a></li>
+  <li><a href="../modules/html.CoverageData.Util.FileSystemEntryCollection.html">html.CoverageData.Util.FileSystemEntryCollection</a></li>
+  <li><a href="../modules/html.CoverageData.Util.HitMissStatistics.html">html.CoverageData.Util.HitMissStatistics</a></li>
+  <li><a href="../modules/html.Writer.Path.OutputPathGenerator.html">html.Writer.Path.OutputPathGenerator</a></li>
+  <li><a href="../modules/html.Writer.Template.AbsoluteTemplateDirectoryPathFinder.html">html.Writer.Template.AbsoluteTemplateDirectoryPathFinder</a></li>
+  <li><a href="../modules/html.Writer.Template.TemplateFileCopier.html">html.Writer.Template.TemplateFileCopier</a></li>
+  <li><a href="../modules/html.Writer.Template.TemplateWriter.html">html.Writer.Template.TemplateWriter</a></li>
+  <li><a href="../modules/html.Writer.TemplateData.Directory.html">html.Writer.TemplateData.Directory</a></li>
+  <li><a href="../modules/html.Writer.TemplateData.File.html">html.Writer.TemplateData.File</a></li>
+  <li><a href="../modules/html.Writer.TemplateData.FileSystemEntry.html">html.Writer.TemplateData.FileSystemEntry</a></li>
+  <li><a href="../modules/html.Writer.TemplateData.HitMissStatistics.html">html.Writer.TemplateData.HitMissStatistics</a></li>
+  <li><a href="../modules/html.Writer.TemplateData.Line.html">html.Writer.TemplateData.Line</a></li>
+  <li><a href="../modules/html.Writer.TemplateData.TemplateDataFactory.html">html.Writer.TemplateData.TemplateDataFactory</a></li>
+  <li><a href="../modules/html.Writer.TemplateData.Total.html">html.Writer.TemplateData.Total</a></li>
+  <li><a href="../modules/html.Writer.Writer.html">html.Writer.Writer</a></li>
+  <li><a href="../modules/reporter.html.html">reporter.html</a></li>
+</ul>
+
+</div>
+
+<div id="content">
+
+<h1>Module <code>html.CoverageData.Total</code></h1>
+<p></p>
+<p></p>
+    <h3>Info:</h3>
+    <ul>
+        <li><strong>Copyright</strong>: 2020 wesen <wesen-ac@web.de></li>
+        <li><strong>Release</strong>: 0.1</li>
+        <li><strong>License</strong>: MIT</li>
+        <li><strong>Author</strong>: wesen</li>
+    </ul>
+
+
+<h2><a href="#Class_Total">Class Total </a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" ><a href="#Total.filePathNormalizer">Total.filePathNormalizer</a></td>
+	<td class="summary">The file path normalizer</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#Total.rootDirectoryCoverageData">Total.rootDirectoryCoverageData</a></td>
+	<td class="summary">The coverage data of the root directory</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#Total.startTimestamp">Total.startTimestamp</a></td>
+	<td class="summary">The timestamp when the coverage report generation was started</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#Total.lastFetchedFileCoverageDataFilePath">Total.lastFetchedFileCoverageDataFilePath</a></td>
+	<td class="summary">The file path of the last fetched File coverage data object
+ This is used to check if the last fetched File coverage data object can be reused instead of
+ fetching the same object again</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#Total.lastFetchedFileCoverageData">Total.lastFetchedFileCoverageData</a></td>
+	<td class="summary">The last fetched File coverage data object</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#Total:new">Total:new (_projectName)</a></td>
+	<td class="summary">Total constructor.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#Total:getRootDirectoryCoverageData">Total:getRootDirectoryCoverageData ()</a></td>
+	<td class="summary">Returns the coverage data of the root directory.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#Total:setStartTimestamp">Total:setStartTimestamp (_startTimestamp)</a></td>
+	<td class="summary">Sets the timestamp when the coverage report generation was started.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#Total:getStartTimestamp">Total:getStartTimestamp ()</a></td>
+	<td class="summary">Returns the timestamp when the coverage report generation was started.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#Total:addEmptyLine">Total:addEmptyLine (_filePath, _lineNumber, _line)</a></td>
+	<td class="summary">Adds an empty line to this Total coverage data.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#Total:addMissedLine">Total:addMissedLine (_filePath, _lineNumber, _line)</a></td>
+	<td class="summary">Adds a missed line to this Total coverage data.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#Total:addHitLine">Total:addHitLine (_filePath, _lineNumber, _line, _numberOfHits)</a></td>
+	<td class="summary">Adds a hit line to this Total coverage data.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#Total:addFileHitMissStatistics">Total:addFileHitMissStatistics (_filePath, _numberOfHits, _numberOfMisses)</a></td>
+	<td class="summary">Adds hit/miss statistics to this Total coverage data.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#Total:getOrCreateFileCoverageData">Total:getOrCreateFileCoverageData (_filePath)</a></td>
+	<td class="summary">Returns the File coverage data for a specified file.</td>
+	</tr>
+</table>
+
+<br/>
+<br/>
+
+
+    <h2 class="section-header has-description"><a name="Class_Total"></a>Class Total </h2>
+
+          <div class="section-description">
+          Contains the total coverage data for all directories and files.
+          </div>
+    <dl class="function">
+    <dt>
+    <a name = "Total.filePathNormalizer"></a>
+    <strong>Total.filePathNormalizer</strong>
+    </dt>
+    <dd>
+    The file path normalizer
+
+
+    <ul>
+        <li><span class="parameter">filePathNormalizer</span>
+            <span class="types"><span class="type">FilePathNormalizer</span></span>
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Total.rootDirectoryCoverageData"></a>
+    <strong>Total.rootDirectoryCoverageData</strong>
+    </dt>
+    <dd>
+    The coverage data of the root directory
+
+
+    <ul>
+        <li><span class="parameter">rootDirectoryCoverageData</span>
+            <span class="types"><span class="type">Directory</span></span>
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Total.startTimestamp"></a>
+    <strong>Total.startTimestamp</strong>
+    </dt>
+    <dd>
+    The timestamp when the coverage report generation was started
+
+
+    <ul>
+        <li><span class="parameter">startTimestamp</span>
+            <span class="types"><span class="type">int</span></span>
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Total.lastFetchedFileCoverageDataFilePath"></a>
+    <strong>Total.lastFetchedFileCoverageDataFilePath</strong>
+    </dt>
+    <dd>
+    The file path of the last fetched File coverage data object
+ This is used to check if the last fetched File coverage data object can be reused instead of
+ fetching the same object again
+
+
+    <ul>
+        <li><span class="parameter">lastFetchedFileCoverageFilePath</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Total.lastFetchedFileCoverageData"></a>
+    <strong>Total.lastFetchedFileCoverageData</strong>
+    </dt>
+    <dd>
+    The last fetched File coverage data object
+
+
+    <ul>
+        <li><span class="parameter">lastFetchedFileCoverageData</span>
+            <span class="types"><span class="type">File</span></span>
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Total:new"></a>
+    <strong>Total:new (_projectName)</strong>
+    </dt>
+    <dd>
+    Total constructor.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">_projectName</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         The project name
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Total:getRootDirectoryCoverageData"></a>
+    <strong>Total:getRootDirectoryCoverageData ()</strong>
+    </dt>
+    <dd>
+    Returns the coverage data of the root directory.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">Directory</span></span>
+        The coverage data of the root directory
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Total:setStartTimestamp"></a>
+    <strong>Total:setStartTimestamp (_startTimestamp)</strong>
+    </dt>
+    <dd>
+    Sets the timestamp when the coverage report generation was started.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">_startTimestamp</span>
+            <span class="types"><span class="type">int</span></span>
+         The timestamp
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Total:getStartTimestamp"></a>
+    <strong>Total:getStartTimestamp ()</strong>
+    </dt>
+    <dd>
+    Returns the timestamp when the coverage report generation was started.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">int</span></span>
+        The timestamp
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Total:addEmptyLine"></a>
+    <strong>Total:addEmptyLine (_filePath, _lineNumber, _line)</strong>
+    </dt>
+    <dd>
+    Adds an empty line to this Total coverage data.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">_filePath</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         The file path
+        </li>
+        <li><span class="parameter">_lineNumber</span>
+            <span class="types"><span class="type">int</span></span>
+         The line number of the line
+        </li>
+        <li><span class="parameter">_line</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         The content of the line
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Total:addMissedLine"></a>
+    <strong>Total:addMissedLine (_filePath, _lineNumber, _line)</strong>
+    </dt>
+    <dd>
+    Adds a missed line to this Total coverage data.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">_filePath</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         The file path
+        </li>
+        <li><span class="parameter">_lineNumber</span>
+            <span class="types"><span class="type">int</span></span>
+         The line number of the line
+        </li>
+        <li><span class="parameter">_line</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         The content of the line
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Total:addHitLine"></a>
+    <strong>Total:addHitLine (_filePath, _lineNumber, _line, _numberOfHits)</strong>
+    </dt>
+    <dd>
+    Adds a hit line to this Total coverage data.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">_filePath</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         The file path
+        </li>
+        <li><span class="parameter">_lineNumber</span>
+            <span class="types"><span class="type">int</span></span>
+         The number of the line
+        </li>
+        <li><span class="parameter">_line</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         The content of the line
+        </li>
+        <li><span class="parameter">_numberOfHits</span>
+            <span class="types"><span class="type">int</span></span>
+         The number of times the line was executed
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Total:addFileHitMissStatistics"></a>
+    <strong>Total:addFileHitMissStatistics (_filePath, _numberOfHits, _numberOfMisses)</strong>
+    </dt>
+    <dd>
+    Adds hit/miss statistics to this Total coverage data.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">_filePath</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         The file path
+        </li>
+        <li><span class="parameter">_numberOfHits</span>
+            <span class="types"><span class="type">int</span></span>
+         The total number of hits in the file
+        </li>
+        <li><span class="parameter">_numberOfMisses</span>
+            <span class="types"><span class="type">int</span></span>
+         The total number of misses in the file
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Total:getOrCreateFileCoverageData"></a>
+    <strong>Total:getOrCreateFileCoverageData (_filePath)</strong>
+    </dt>
+    <dd>
+    Returns the File coverage data for a specified file.
+ A new File coverage data object will be created if there is none for that file yet.
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">_filePath</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         The file path whose File coverage data to return
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">File</span></span>
+        The file coverage data for the specified file
+    </ol>
+
+
+
+
+</dd>
+</dl>
+
+
+</div> <!-- id="content" -->
+</div> <!-- id="main" -->
+<div id="about">
+<i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
+<i style="float:right;">Last updated 2020-05-30 15:03:14 </i>
+</div> <!-- id="about" -->
+</div> <!-- id="container" -->
+</body>
+</html>

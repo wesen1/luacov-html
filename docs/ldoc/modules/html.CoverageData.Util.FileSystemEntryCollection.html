@@ -1,0 +1,264 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<head>
+    <title>luacov-html documentation</title>
+    <link rel="stylesheet" href="../ldoc.css" type="text/css" />
+</head>
+<body>
+
+<div id="container">
+
+<div id="product">
+	<div id="product_logo"></div>
+	<div id="product_name"><big><b></b></big></div>
+	<div id="product_description"></div>
+</div> <!-- id="product" -->
+
+
+<div id="main">
+
+
+<!-- Menu -->
+
+<div id="navigation">
+<br/>
+<h1>luacov-html</h1>
+
+<ul>
+  <li><a href="../index.html">Index</a></li>
+</ul>
+
+<h2>Contents</h2>
+<ul>
+<li><a href="#Class_FileSystemEntryCollection">Class FileSystemEntryCollection </a></li>
+</ul>
+
+
+<h2>Modules</h2>
+<ul class="nowrap">
+  <li><a href="../modules/html.Configuration.html">html.Configuration</a></li>
+  <li><a href="../modules/html.CoverageData.Directory.html">html.CoverageData.Directory</a></li>
+  <li><a href="../modules/html.CoverageData.File.html">html.CoverageData.File</a></li>
+  <li><a href="../modules/html.CoverageData.FileSystemEntry.html">html.CoverageData.FileSystemEntry</a></li>
+  <li><a href="../modules/html.CoverageData.Line.html">html.CoverageData.Line</a></li>
+  <li><a href="../modules/html.CoverageData.Total.html">html.CoverageData.Total</a></li>
+  <li><a href="../modules/html.CoverageData.Util.FilePathNormalizer.html">html.CoverageData.Util.FilePathNormalizer</a></li>
+  <li><strong>html.CoverageData.Util.FileSystemEntryCollection</strong></li>
+  <li><a href="../modules/html.CoverageData.Util.HitMissStatistics.html">html.CoverageData.Util.HitMissStatistics</a></li>
+  <li><a href="../modules/html.Writer.Path.OutputPathGenerator.html">html.Writer.Path.OutputPathGenerator</a></li>
+  <li><a href="../modules/html.Writer.Template.AbsoluteTemplateDirectoryPathFinder.html">html.Writer.Template.AbsoluteTemplateDirectoryPathFinder</a></li>
+  <li><a href="../modules/html.Writer.Template.TemplateFileCopier.html">html.Writer.Template.TemplateFileCopier</a></li>
+  <li><a href="../modules/html.Writer.Template.TemplateWriter.html">html.Writer.Template.TemplateWriter</a></li>
+  <li><a href="../modules/html.Writer.TemplateData.Directory.html">html.Writer.TemplateData.Directory</a></li>
+  <li><a href="../modules/html.Writer.TemplateData.File.html">html.Writer.TemplateData.File</a></li>
+  <li><a href="../modules/html.Writer.TemplateData.FileSystemEntry.html">html.Writer.TemplateData.FileSystemEntry</a></li>
+  <li><a href="../modules/html.Writer.TemplateData.HitMissStatistics.html">html.Writer.TemplateData.HitMissStatistics</a></li>
+  <li><a href="../modules/html.Writer.TemplateData.Line.html">html.Writer.TemplateData.Line</a></li>
+  <li><a href="../modules/html.Writer.TemplateData.TemplateDataFactory.html">html.Writer.TemplateData.TemplateDataFactory</a></li>
+  <li><a href="../modules/html.Writer.TemplateData.Total.html">html.Writer.TemplateData.Total</a></li>
+  <li><a href="../modules/html.Writer.Writer.html">html.Writer.Writer</a></li>
+  <li><a href="../modules/reporter.html.html">reporter.html</a></li>
+</ul>
+
+</div>
+
+<div id="content">
+
+<h1>Module <code>html.CoverageData.Util.FileSystemEntryCollection</code></h1>
+<p></p>
+<p></p>
+    <h3>Info:</h3>
+    <ul>
+        <li><strong>Copyright</strong>: 2020 wesen <wesen-ac@web.de></li>
+        <li><strong>Release</strong>: 0.1</li>
+        <li><strong>License</strong>: MIT</li>
+        <li><strong>Author</strong>: wesen</li>
+    </ul>
+
+
+<h2><a href="#Class_FileSystemEntryCollection">Class FileSystemEntryCollection </a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" ><a href="#FileSystemEntryCollection.parentDirectoryCoverageData">FileSystemEntryCollection.parentDirectoryCoverageData</a></td>
+	<td class="summary">The coverage data of the parent directory</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#FileSystemEntryCollection.coverageDataClass">FileSystemEntryCollection.coverageDataClass</a></td>
+	<td class="summary">The class to use to create new FileSystemEntry coverageD data objects</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#FileSystemEntryCollection.fileSystemEntryCoverages">FileSystemEntryCollection.fileSystemEntryCoverages</a></td>
+	<td class="summary">The list of FileSystemEntry coverages</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#FileSystemEntryCollection:new">FileSystemEntryCollection:new (_parentDirectoryCoverageData, _coverageDataClass)</a></td>
+	<td class="summary">FileSystemEntryCollection constructor.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#FileSystemEntryCollection:getOrCreateCoverageData">FileSystemEntryCollection:getOrCreateCoverageData (_baseName)</a></td>
+	<td class="summary">Returns the FileSystemEntry coverage data for a given base name.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#FileSystemEntryCollection:getSortedFileSystemEntryCoverages">FileSystemEntryCollection:getSortedFileSystemEntryCoverages ()</a></td>
+	<td class="summary">Returns a list of all FileSystemEntry coverages sorted ascending by name.</td>
+	</tr>
+</table>
+
+<br/>
+<br/>
+
+
+    <h2 class="section-header has-description"><a name="Class_FileSystemEntryCollection"></a>Class FileSystemEntryCollection </h2>
+
+          <div class="section-description">
+          Manages a list of FileSystemEntry coverage data objects.
+          </div>
+    <dl class="function">
+    <dt>
+    <a name = "FileSystemEntryCollection.parentDirectoryCoverageData"></a>
+    <strong>FileSystemEntryCollection.parentDirectoryCoverageData</strong>
+    </dt>
+    <dd>
+    The coverage data of the parent directory
+
+
+    <ul>
+        <li><span class="parameter">parentDirectoryCoverageData</span>
+            <span class="types"><span class="type">Directory[]</span></span>
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "FileSystemEntryCollection.coverageDataClass"></a>
+    <strong>FileSystemEntryCollection.coverageDataClass</strong>
+    </dt>
+    <dd>
+    The class to use to create new FileSystemEntry coverageD data objects
+
+
+    <ul>
+        <li><span class="parameter">coverageDataClass</span>
+            <span class="types"><span class="type">FileSystemEntry</span></span>
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "FileSystemEntryCollection.fileSystemEntryCoverages"></a>
+    <strong>FileSystemEntryCollection.fileSystemEntryCoverages</strong>
+    </dt>
+    <dd>
+    The list of FileSystemEntry coverages
+
+
+    <ul>
+        <li><span class="parameter">fileSystemEntryCoverages</span>
+            <span class="types"><span class="type">FileSystemEntry[]</span></span>
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "FileSystemEntryCollection:new"></a>
+    <strong>FileSystemEntryCollection:new (_parentDirectoryCoverageData, _coverageDataClass)</strong>
+    </dt>
+    <dd>
+    FileSystemEntryCollection constructor.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">_parentDirectoryCoverageData</span>
+            <span class="types"><span class="type">Directory</span></span>
+         The coverage data of the parent directory
+        </li>
+        <li><span class="parameter">_coverageDataClass</span>
+            <span class="types"><span class="type">FileSystemEntry</span></span>
+         The class to use to create new FileSystemEntry coverage data objects
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "FileSystemEntryCollection:getOrCreateCoverageData"></a>
+    <strong>FileSystemEntryCollection:getOrCreateCoverageData (_baseName)</strong>
+    </dt>
+    <dd>
+    Returns the FileSystemEntry coverage data for a given base name.
+ A new FileSystemEntry coverage data object will be created if none exists yet for that name.
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">_baseName</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         The base name whose FileSystemEntry coverage data to return
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">FileSystemEntry</span></span>
+        The coverage data for the FileSystemEntry
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "FileSystemEntryCollection:getSortedFileSystemEntryCoverages"></a>
+    <strong>FileSystemEntryCollection:getSortedFileSystemEntryCoverages ()</strong>
+    </dt>
+    <dd>
+    Returns a list of all FileSystemEntry coverages sorted ascending by name.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">FileSystemEntry[]</span></span>
+        The sorted list of all FileSystemEntry coverages
+    </ol>
+
+
+
+
+</dd>
+</dl>
+
+
+</div> <!-- id="content" -->
+</div> <!-- id="main" -->
+<div id="about">
+<i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
+<i style="float:right;">Last updated 2020-05-30 15:03:14 </i>
+</div> <!-- id="about" -->
+</div> <!-- id="container" -->
+</body>
+</html>

@@ -1,0 +1,327 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<head>
+    <title>luacov-html documentation</title>
+    <link rel="stylesheet" href="../ldoc.css" type="text/css" />
+</head>
+<body>
+
+<div id="container">
+
+<div id="product">
+	<div id="product_logo"></div>
+	<div id="product_name"><big><b></b></big></div>
+	<div id="product_description"></div>
+</div> <!-- id="product" -->
+
+
+<div id="main">
+
+
+<!-- Menu -->
+
+<div id="navigation">
+<br/>
+<h1>luacov-html</h1>
+
+<ul>
+  <li><a href="../index.html">Index</a></li>
+</ul>
+
+<h2>Contents</h2>
+<ul>
+<li><a href="#Class_Writer">Class Writer </a></li>
+</ul>
+
+
+<h2>Modules</h2>
+<ul class="nowrap">
+  <li><a href="../modules/html.Configuration.html">html.Configuration</a></li>
+  <li><a href="../modules/html.CoverageData.Directory.html">html.CoverageData.Directory</a></li>
+  <li><a href="../modules/html.CoverageData.File.html">html.CoverageData.File</a></li>
+  <li><a href="../modules/html.CoverageData.FileSystemEntry.html">html.CoverageData.FileSystemEntry</a></li>
+  <li><a href="../modules/html.CoverageData.Line.html">html.CoverageData.Line</a></li>
+  <li><a href="../modules/html.CoverageData.Total.html">html.CoverageData.Total</a></li>
+  <li><a href="../modules/html.CoverageData.Util.FilePathNormalizer.html">html.CoverageData.Util.FilePathNormalizer</a></li>
+  <li><a href="../modules/html.CoverageData.Util.FileSystemEntryCollection.html">html.CoverageData.Util.FileSystemEntryCollection</a></li>
+  <li><a href="../modules/html.CoverageData.Util.HitMissStatistics.html">html.CoverageData.Util.HitMissStatistics</a></li>
+  <li><a href="../modules/html.Writer.Path.OutputPathGenerator.html">html.Writer.Path.OutputPathGenerator</a></li>
+  <li><a href="../modules/html.Writer.Template.AbsoluteTemplateDirectoryPathFinder.html">html.Writer.Template.AbsoluteTemplateDirectoryPathFinder</a></li>
+  <li><a href="../modules/html.Writer.Template.TemplateFileCopier.html">html.Writer.Template.TemplateFileCopier</a></li>
+  <li><a href="../modules/html.Writer.Template.TemplateWriter.html">html.Writer.Template.TemplateWriter</a></li>
+  <li><a href="../modules/html.Writer.TemplateData.Directory.html">html.Writer.TemplateData.Directory</a></li>
+  <li><a href="../modules/html.Writer.TemplateData.File.html">html.Writer.TemplateData.File</a></li>
+  <li><a href="../modules/html.Writer.TemplateData.FileSystemEntry.html">html.Writer.TemplateData.FileSystemEntry</a></li>
+  <li><a href="../modules/html.Writer.TemplateData.HitMissStatistics.html">html.Writer.TemplateData.HitMissStatistics</a></li>
+  <li><a href="../modules/html.Writer.TemplateData.Line.html">html.Writer.TemplateData.Line</a></li>
+  <li><a href="../modules/html.Writer.TemplateData.TemplateDataFactory.html">html.Writer.TemplateData.TemplateDataFactory</a></li>
+  <li><a href="../modules/html.Writer.TemplateData.Total.html">html.Writer.TemplateData.Total</a></li>
+  <li><strong>html.Writer.Writer</strong></li>
+  <li><a href="../modules/reporter.html.html">reporter.html</a></li>
+</ul>
+
+</div>
+
+<div id="content">
+
+<h1>Module <code>html.Writer.Writer</code></h1>
+<p></p>
+<p></p>
+    <h3>Info:</h3>
+    <ul>
+        <li><strong>Copyright</strong>: 2020 wesen <wesen-ac@web.de></li>
+        <li><strong>Release</strong>: 0.1</li>
+        <li><strong>License</strong>: MIT</li>
+        <li><strong>Author</strong>: wesen</li>
+    </ul>
+
+
+<h2><a href="#Class_Writer">Class Writer </a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" ><a href="#Writer.templateFileCopier">Writer.templateFileCopier</a></td>
+	<td class="summary">The template file copier</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#Writer.templateWriter">Writer.templateWriter</a></td>
+	<td class="summary">The template writer</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#Writer.outputPathGenerator">Writer.outputPathGenerator</a></td>
+	<td class="summary">The output path generator</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#Writer.templateDataFactory">Writer.templateDataFactory</a></td>
+	<td class="summary">The template data factory</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#Writer:new">Writer:new (_baseOutputDirectoryPath)</a></td>
+	<td class="summary">Writer constructor.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#Writer:writeTotalCoverage">Writer:writeTotalCoverage (_totalCoverageData)</a></td>
+	<td class="summary">Generates and writese the HTML output for a Total coverage data object.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#Writer:writeDirectoryCoverage">Writer:writeDirectoryCoverage (_directoryCoverageData)</a></td>
+	<td class="summary">Generates and writes the HTML output for a Directory coverage data object.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#Writer:writeDirectoryPage">Writer:writeDirectoryPage (_directoryCoverageData)</a></td>
+	<td class="summary">Generates and writes the HTML page that visualizes a Directory coverage data object.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#Writer:writeFilePage">Writer:writeFilePage (_fileCoverageData)</a></td>
+	<td class="summary">Generates and writes the HTML page that visualizes a File coverage data object.</td>
+	</tr>
+</table>
+
+<br/>
+<br/>
+
+
+    <h2 class="section-header has-description"><a name="Class_Writer"></a>Class Writer </h2>
+
+          <div class="section-description">
+          Generates and writes the HTML output for Total coverage data objects.
+          </div>
+    <dl class="function">
+    <dt>
+    <a name = "Writer.templateFileCopier"></a>
+    <strong>Writer.templateFileCopier</strong>
+    </dt>
+    <dd>
+    The template file copier
+
+
+    <ul>
+        <li><span class="parameter">templateFileCopier</span>
+            <span class="types"><span class="type">TemplateFileCopier</span></span>
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Writer.templateWriter"></a>
+    <strong>Writer.templateWriter</strong>
+    </dt>
+    <dd>
+    The template writer
+
+
+    <ul>
+        <li><span class="parameter">templateWriter</span>
+            <span class="types"><span class="type">TemplateWriter</span></span>
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Writer.outputPathGenerator"></a>
+    <strong>Writer.outputPathGenerator</strong>
+    </dt>
+    <dd>
+    The output path generator
+
+
+    <ul>
+        <li><span class="parameter">outputPathGenerator</span>
+            <span class="types"><span class="type">OutputPathGenerator</span></span>
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Writer.templateDataFactory"></a>
+    <strong>Writer.templateDataFactory</strong>
+    </dt>
+    <dd>
+    The template data factory
+
+
+    <ul>
+        <li><span class="parameter">templateDataFactory</span>
+            <span class="types"><span class="type">TemplateDataFactory</span></span>
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Writer:new"></a>
+    <strong>Writer:new (_baseOutputDirectoryPath)</strong>
+    </dt>
+    <dd>
+    Writer constructor.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">_baseOutputDirectoryPath</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         The path to the base output directory
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Writer:writeTotalCoverage"></a>
+    <strong>Writer:writeTotalCoverage (_totalCoverageData)</strong>
+    </dt>
+    <dd>
+    Generates and writese the HTML output for a Total coverage data object.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">_totalCoverageData</span>
+            <span class="types"><span class="type">CoverageData.Total</span></span>
+         The Total coverage data object
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Writer:writeDirectoryCoverage"></a>
+    <strong>Writer:writeDirectoryCoverage (_directoryCoverageData)</strong>
+    </dt>
+    <dd>
+    Generates and writes the HTML output for a Directory coverage data object.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">_directoryCoverageData</span>
+            <span class="types"><span class="type">CoverageData.Directory</span></span>
+         The Directory coverage data object
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Writer:writeDirectoryPage"></a>
+    <strong>Writer:writeDirectoryPage (_directoryCoverageData)</strong>
+    </dt>
+    <dd>
+    Generates and writes the HTML page that visualizes a Directory coverage data object.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">_directoryCoverageData</span>
+            <span class="types"><span class="type">CoverageData.Directory</span></span>
+         The Directory coverage data object
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Writer:writeFilePage"></a>
+    <strong>Writer:writeFilePage (_fileCoverageData)</strong>
+    </dt>
+    <dd>
+    Generates and writes the HTML page that visualizes a File coverage data object.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">_fileCoverageData</span>
+            <span class="types"><span class="type">CoverageData.File</span></span>
+         The File coverage data object
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+</dl>
+
+
+</div> <!-- id="content" -->
+</div> <!-- id="main" -->
+<div id="about">
+<i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
+<i style="float:right;">Last updated 2020-05-30 15:03:14 </i>
+</div> <!-- id="about" -->
+</div> <!-- id="container" -->
+</body>
+</html>

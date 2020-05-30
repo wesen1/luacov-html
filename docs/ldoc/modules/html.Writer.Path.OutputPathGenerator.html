@@ -1,0 +1,285 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<head>
+    <title>luacov-html documentation</title>
+    <link rel="stylesheet" href="../ldoc.css" type="text/css" />
+</head>
+<body>
+
+<div id="container">
+
+<div id="product">
+	<div id="product_logo"></div>
+	<div id="product_name"><big><b></b></big></div>
+	<div id="product_description"></div>
+</div> <!-- id="product" -->
+
+
+<div id="main">
+
+
+<!-- Menu -->
+
+<div id="navigation">
+<br/>
+<h1>luacov-html</h1>
+
+<ul>
+  <li><a href="../index.html">Index</a></li>
+</ul>
+
+<h2>Contents</h2>
+<ul>
+<li><a href="#Class_OutputPathGenerator">Class OutputPathGenerator </a></li>
+</ul>
+
+
+<h2>Modules</h2>
+<ul class="nowrap">
+  <li><a href="../modules/html.Configuration.html">html.Configuration</a></li>
+  <li><a href="../modules/html.CoverageData.Directory.html">html.CoverageData.Directory</a></li>
+  <li><a href="../modules/html.CoverageData.File.html">html.CoverageData.File</a></li>
+  <li><a href="../modules/html.CoverageData.FileSystemEntry.html">html.CoverageData.FileSystemEntry</a></li>
+  <li><a href="../modules/html.CoverageData.Line.html">html.CoverageData.Line</a></li>
+  <li><a href="../modules/html.CoverageData.Total.html">html.CoverageData.Total</a></li>
+  <li><a href="../modules/html.CoverageData.Util.FilePathNormalizer.html">html.CoverageData.Util.FilePathNormalizer</a></li>
+  <li><a href="../modules/html.CoverageData.Util.FileSystemEntryCollection.html">html.CoverageData.Util.FileSystemEntryCollection</a></li>
+  <li><a href="../modules/html.CoverageData.Util.HitMissStatistics.html">html.CoverageData.Util.HitMissStatistics</a></li>
+  <li><strong>html.Writer.Path.OutputPathGenerator</strong></li>
+  <li><a href="../modules/html.Writer.Template.AbsoluteTemplateDirectoryPathFinder.html">html.Writer.Template.AbsoluteTemplateDirectoryPathFinder</a></li>
+  <li><a href="../modules/html.Writer.Template.TemplateFileCopier.html">html.Writer.Template.TemplateFileCopier</a></li>
+  <li><a href="../modules/html.Writer.Template.TemplateWriter.html">html.Writer.Template.TemplateWriter</a></li>
+  <li><a href="../modules/html.Writer.TemplateData.Directory.html">html.Writer.TemplateData.Directory</a></li>
+  <li><a href="../modules/html.Writer.TemplateData.File.html">html.Writer.TemplateData.File</a></li>
+  <li><a href="../modules/html.Writer.TemplateData.FileSystemEntry.html">html.Writer.TemplateData.FileSystemEntry</a></li>
+  <li><a href="../modules/html.Writer.TemplateData.HitMissStatistics.html">html.Writer.TemplateData.HitMissStatistics</a></li>
+  <li><a href="../modules/html.Writer.TemplateData.Line.html">html.Writer.TemplateData.Line</a></li>
+  <li><a href="../modules/html.Writer.TemplateData.TemplateDataFactory.html">html.Writer.TemplateData.TemplateDataFactory</a></li>
+  <li><a href="../modules/html.Writer.TemplateData.Total.html">html.Writer.TemplateData.Total</a></li>
+  <li><a href="../modules/html.Writer.Writer.html">html.Writer.Writer</a></li>
+  <li><a href="../modules/reporter.html.html">reporter.html</a></li>
+</ul>
+
+</div>
+
+<div id="content">
+
+<h1>Module <code>html.Writer.Path.OutputPathGenerator</code></h1>
+<p></p>
+<p></p>
+    <h3>Info:</h3>
+    <ul>
+        <li><strong>Copyright</strong>: 2020 wesen <wesen-ac@web.de></li>
+        <li><strong>Release</strong>: 0.1</li>
+        <li><strong>License</strong>: MIT</li>
+        <li><strong>Author</strong>: wesen</li>
+    </ul>
+
+
+<h2><a href="#Class_OutputPathGenerator">Class OutputPathGenerator </a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" ><a href="#OutputPathGenerator.baseOutputDirectoryPath">OutputPathGenerator.baseOutputDirectoryPath</a></td>
+	<td class="summary">The path to the base output directory</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#OutputPathGenerator.coverageDataOutputFilePaths">OutputPathGenerator.coverageDataOutputFilePaths</a></td>
+	<td class="summary">The cached output file paths for FileSystemEntry coverage data objects
+ This list is in the format { [<CoverageData.FileSystemEntry>] = <outputFilePath>, ...</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#OutputPathGenerator:new">OutputPathGenerator:new (_baseOutputDirectoryPath)</a></td>
+	<td class="summary">OutputPathGenerator constructor.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#OutputPathGenerator:generateRelativePath">OutputPathGenerator:generateRelativePath (_fromFileSystemEntryCoverageData, _toFileSystemEntryCoverageData, _includeBaseName)</a></td>
+	<td class="summary">Generates a path to a FileSystemEntry coverage data object that is relative from another
+ FileSystemEntry coverage data object.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#OutputPathGenerator:generateOutputFilePathForCoverageData">OutputPathGenerator:generateOutputFilePathForCoverageData (_fileSystemEntryCoverageData)</a></td>
+	<td class="summary">Generates the full path for a FileSystemEntry's output HTML file.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#OutputPathGenerator:generateOutputFilePathForRelativePath">OutputPathGenerator:generateOutputFilePathForRelativePath (_relativePath)</a></td>
+	<td class="summary">Generates the total output file path from a file path that is relative from the base output directory.</td>
+	</tr>
+</table>
+
+<br/>
+<br/>
+
+
+    <h2 class="section-header has-description"><a name="Class_OutputPathGenerator"></a>Class OutputPathGenerator </h2>
+
+          <div class="section-description">
+          Generates the output file paths for the generated HTML files.
+          </div>
+    <dl class="function">
+    <dt>
+    <a name = "OutputPathGenerator.baseOutputDirectoryPath"></a>
+    <strong>OutputPathGenerator.baseOutputDirectoryPath</strong>
+    </dt>
+    <dd>
+    The path to the base output directory
+
+
+    <ul>
+        <li><span class="parameter">baseOutputDirectoryPath</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "OutputPathGenerator.coverageDataOutputFilePaths"></a>
+    <strong>OutputPathGenerator.coverageDataOutputFilePaths</strong>
+    </dt>
+    <dd>
+    The cached output file paths for FileSystemEntry coverage data objects
+ This list is in the format { [<CoverageData.FileSystemEntry>] = <outputFilePath>, ...  }
+
+
+
+    <ul>
+        <li><span class="parameter">coverageDataOutputFilePaths</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "OutputPathGenerator:new"></a>
+    <strong>OutputPathGenerator:new (_baseOutputDirectoryPath)</strong>
+    </dt>
+    <dd>
+    OutputPathGenerator constructor.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">_baseOutputDirectoryPath</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         The path to the base output directory
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "OutputPathGenerator:generateRelativePath"></a>
+    <strong>OutputPathGenerator:generateRelativePath (_fromFileSystemEntryCoverageData, _toFileSystemEntryCoverageData, _includeBaseName)</strong>
+    </dt>
+    <dd>
+    Generates a path to a FileSystemEntry coverage data object that is relative from another
+ FileSystemEntry coverage data object.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">_fromFileSystemEntryCoverageData</span>
+            <span class="types"><span class="type">CoverageData.FileSystemEntry</span></span>
+         The start of the relative path
+        </li>
+        <li><span class="parameter">_toFileSystemEntryCoverageData</span>
+            <span class="types"><span class="type">CoverageData.FileSystemEntry</span></span>
+         The end of the relative path
+        </li>
+        <li><span class="parameter">_includeBaseName</span>
+            <span class="types"><span class="type">bool</span></span>
+         True to include the base name of the second FileSystemEntry in the generated path, false otherwise
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+        The relative path from the first FileSystemEntry to the other
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "OutputPathGenerator:generateOutputFilePathForCoverageData"></a>
+    <strong>OutputPathGenerator:generateOutputFilePathForCoverageData (_fileSystemEntryCoverageData)</strong>
+    </dt>
+    <dd>
+    Generates the full path for a FileSystemEntry's output HTML file.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">_fileSystemEntryCoverageData</span>
+            <span class="types"><span class="type">CoverageData.FileSystemEntry</span></span>
+         The FileSystemEntry coverage data object
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+        The full path for the FileSystemEntry's output HTML file
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "OutputPathGenerator:generateOutputFilePathForRelativePath"></a>
+    <strong>OutputPathGenerator:generateOutputFilePathForRelativePath (_relativePath)</strong>
+    </dt>
+    <dd>
+    Generates the total output file path from a file path that is relative from the base output directory.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">_relativePath</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         The relative path
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+        The total output file path
+    </ol>
+
+
+
+
+</dd>
+</dl>
+
+
+</div> <!-- id="content" -->
+</div> <!-- id="main" -->
+<div id="about">
+<i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
+<i style="float:right;">Last updated 2020-05-30 15:03:14 </i>
+</div> <!-- id="about" -->
+</div> <!-- id="container" -->
+</body>
+</html>

@@ -1,0 +1,335 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<head>
+    <title>luacov-html documentation</title>
+    <link rel="stylesheet" href="../ldoc.css" type="text/css" />
+</head>
+<body>
+
+<div id="container">
+
+<div id="product">
+	<div id="product_logo"></div>
+	<div id="product_name"><big><b></b></big></div>
+	<div id="product_description"></div>
+</div> <!-- id="product" -->
+
+
+<div id="main">
+
+
+<!-- Menu -->
+
+<div id="navigation">
+<br/>
+<h1>luacov-html</h1>
+
+<ul>
+  <li><a href="../index.html">Index</a></li>
+</ul>
+
+<h2>Contents</h2>
+<ul>
+<li><a href="#Class_Line">Class Line </a></li>
+</ul>
+
+
+<h2>Modules</h2>
+<ul class="nowrap">
+  <li><a href="../modules/html.Configuration.html">html.Configuration</a></li>
+  <li><a href="../modules/html.CoverageData.Directory.html">html.CoverageData.Directory</a></li>
+  <li><a href="../modules/html.CoverageData.File.html">html.CoverageData.File</a></li>
+  <li><a href="../modules/html.CoverageData.FileSystemEntry.html">html.CoverageData.FileSystemEntry</a></li>
+  <li><strong>html.CoverageData.Line</strong></li>
+  <li><a href="../modules/html.CoverageData.Total.html">html.CoverageData.Total</a></li>
+  <li><a href="../modules/html.CoverageData.Util.FilePathNormalizer.html">html.CoverageData.Util.FilePathNormalizer</a></li>
+  <li><a href="../modules/html.CoverageData.Util.FileSystemEntryCollection.html">html.CoverageData.Util.FileSystemEntryCollection</a></li>
+  <li><a href="../modules/html.CoverageData.Util.HitMissStatistics.html">html.CoverageData.Util.HitMissStatistics</a></li>
+  <li><a href="../modules/html.Writer.Path.OutputPathGenerator.html">html.Writer.Path.OutputPathGenerator</a></li>
+  <li><a href="../modules/html.Writer.Template.AbsoluteTemplateDirectoryPathFinder.html">html.Writer.Template.AbsoluteTemplateDirectoryPathFinder</a></li>
+  <li><a href="../modules/html.Writer.Template.TemplateFileCopier.html">html.Writer.Template.TemplateFileCopier</a></li>
+  <li><a href="../modules/html.Writer.Template.TemplateWriter.html">html.Writer.Template.TemplateWriter</a></li>
+  <li><a href="../modules/html.Writer.TemplateData.Directory.html">html.Writer.TemplateData.Directory</a></li>
+  <li><a href="../modules/html.Writer.TemplateData.File.html">html.Writer.TemplateData.File</a></li>
+  <li><a href="../modules/html.Writer.TemplateData.FileSystemEntry.html">html.Writer.TemplateData.FileSystemEntry</a></li>
+  <li><a href="../modules/html.Writer.TemplateData.HitMissStatistics.html">html.Writer.TemplateData.HitMissStatistics</a></li>
+  <li><a href="../modules/html.Writer.TemplateData.Line.html">html.Writer.TemplateData.Line</a></li>
+  <li><a href="../modules/html.Writer.TemplateData.TemplateDataFactory.html">html.Writer.TemplateData.TemplateDataFactory</a></li>
+  <li><a href="../modules/html.Writer.TemplateData.Total.html">html.Writer.TemplateData.Total</a></li>
+  <li><a href="../modules/html.Writer.Writer.html">html.Writer.Writer</a></li>
+  <li><a href="../modules/reporter.html.html">reporter.html</a></li>
+</ul>
+
+</div>
+
+<div id="content">
+
+<h1>Module <code>html.CoverageData.Line</code></h1>
+<p></p>
+<p></p>
+    <h3>Info:</h3>
+    <ul>
+        <li><strong>Copyright</strong>: 2020 wesen <wesen-ac@web.de></li>
+        <li><strong>Release</strong>: 0.1</li>
+        <li><strong>License</strong>: MIT</li>
+        <li><strong>Author</strong>: wesen</li>
+    </ul>
+
+
+<h2><a href="#Class_Line">Class Line </a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" ><a href="#Line.type">Line.type</a></td>
+	<td class="summary">The Line coverage type</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#Line.line">Line.line</a></td>
+	<td class="summary">The content of the line</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#Line.lineNumber">Line.lineNumber</a></td>
+	<td class="summary">The line number of the line</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#Line.numberOfHits">Line.numberOfHits</a></td>
+	<td class="summary">The number of times the line was executed</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#Line:new">Line:new (_type, _line, _lineNumber, _numberOfHits)</a></td>
+	<td class="summary">Line constructor.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#Line:getType">Line:getType ()</a></td>
+	<td class="summary">Returns the Line coverage type.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#Line:getLine">Line:getLine ()</a></td>
+	<td class="summary">Returns the content of the line.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#Line:getLineNumber">Line:getLineNumber ()</a></td>
+	<td class="summary">Returns the line number of the line.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#Line:getNumberOfHits">Line:getNumberOfHits ()</a></td>
+	<td class="summary">Returns the number of times the line was executed.</td>
+	</tr>
+</table>
+
+<br/>
+<br/>
+
+
+    <h2 class="section-header has-description"><a name="Class_Line"></a>Class Line </h2>
+
+          <div class="section-description">
+          Contains the coverage information about a single line.
+          </div>
+    <dl class="function">
+    <dt>
+    <a name = "Line.type"></a>
+    <strong>Line.type</strong>
+    </dt>
+    <dd>
+    The Line coverage type
+
+
+    <ul>
+        <li><span class="parameter">type</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Line.line"></a>
+    <strong>Line.line</strong>
+    </dt>
+    <dd>
+    The content of the line
+
+
+    <ul>
+        <li><span class="parameter">line</span>
+            <span class="types"><a class="type" href="../modules/html.CoverageData.Line.html#Line.line">line</a></span>
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Line.lineNumber"></a>
+    <strong>Line.lineNumber</strong>
+    </dt>
+    <dd>
+    The line number of the line
+
+
+    <ul>
+        <li><span class="parameter">lineNumber</span>
+            <span class="types"><span class="type">int</span></span>
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Line.numberOfHits"></a>
+    <strong>Line.numberOfHits</strong>
+    </dt>
+    <dd>
+    The number of times the line was executed
+
+
+    <ul>
+        <li><span class="parameter">numberOfHits</span>
+            <span class="types"><span class="type">int</span></span>
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Line:new"></a>
+    <strong>Line:new (_type, _line, _lineNumber, _numberOfHits)</strong>
+    </dt>
+    <dd>
+    Line constructor.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">_type</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         The Line coverage type (one of the TYPE_* constants)
+        </li>
+        <li><span class="parameter">_line</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         The content of the line
+        </li>
+        <li><span class="parameter">_lineNumber</span>
+            <span class="types"><span class="type">int</span></span>
+         The line number of the line
+        </li>
+        <li><span class="parameter">_numberOfHits</span>
+            <span class="types"><span class="type">int</span></span>
+         The number of times the line was executed
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Line:getType"></a>
+    <strong>Line:getType ()</strong>
+    </dt>
+    <dd>
+    Returns the Line coverage type.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+        The Line coverage type
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Line:getLine"></a>
+    <strong>Line:getLine ()</strong>
+    </dt>
+    <dd>
+    Returns the content of the line.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+        The content of the line
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Line:getLineNumber"></a>
+    <strong>Line:getLineNumber ()</strong>
+    </dt>
+    <dd>
+    Returns the line number of the line.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">int</span></span>
+        The line number
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "Line:getNumberOfHits"></a>
+    <strong>Line:getNumberOfHits ()</strong>
+    </dt>
+    <dd>
+    Returns the number of times the line was executed.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">int</span></span>
+        The number of times the line was executed
+    </ol>
+
+
+
+
+</dd>
+</dl>
+
+
+</div> <!-- id="content" -->
+</div> <!-- id="main" -->
+<div id="about">
+<i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
+<i style="float:right;">Last updated 2020-05-30 15:03:14 </i>
+</div> <!-- id="about" -->
+</div> <!-- id="container" -->
+</body>
+</html>
