@@ -10,6 +10,7 @@ Example
 -------
 
 Have a look at `example/tests/.luacov` for a fully configured example.
+You can view a live version of the example coverage report [here](https://wesen1.github.io/luacov-html/example-coverage-report/).
 
 
 Usage
