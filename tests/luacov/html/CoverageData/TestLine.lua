@@ -8,7 +8,7 @@
 local TestCase = require "wLuaUnit.TestCase"
 
 ---
--- Checks that the CoverageData.Line clas works as expected.
+-- Checks that the CoverageData.Line class works as expected.
 --
 -- @type TestLine
 --
