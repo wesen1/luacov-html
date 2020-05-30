@@ -21,7 +21,8 @@ dependencies = {
   "lua >= 5.1",
   "classic = 0.1.0-1",
   "penlight >= 1.7.0-1",
-  "luacov >= 0.14.0-1"
+  "luacov >= 0.14.0-1",
+  "lua-resty-template >= 2.0-1"
 }
 
 build = {
