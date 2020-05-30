@@ -9,7 +9,8 @@ This is based on the html reporter from [luacov-multiple](https://github.com/to-
 Example
 -------
 
-Have a look at `example/tests/.luacov` for a fully configured example.
+Have a look at `example/tests/.luacov` for a fully configured example. </br>
+You can view a live version of the example coverage report [here](https://wesen1.github.io/luacov-html/example-coverage-report/).
 
 
 Usage
