@@ -1,0 +1,476 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<head>
+    <title>luacov-html documentation</title>
+    <link rel="stylesheet" href="../ldoc.css" type="text/css" />
+</head>
+<body>
+
+<div id="container">
+
+<div id="product">
+	<div id="product_logo"></div>
+	<div id="product_name"><big><b></b></big></div>
+	<div id="product_description"></div>
+</div> <!-- id="product" -->
+
+
+<div id="main">
+
+
+<!-- Menu -->
+
+<div id="navigation">
+<br/>
+<h1>luacov-html</h1>
+
+<ul>
+  <li><a href="../index.html">Index</a></li>
+</ul>
+
+<h2>Contents</h2>
+<ul>
+<li><a href="#Class_FileSystemEntry">Class FileSystemEntry </a></li>
+</ul>
+
+
+<h2>Modules</h2>
+<ul class="nowrap">
+  <li><a href="../modules/html.Configuration.html">html.Configuration</a></li>
+  <li><a href="../modules/html.CoverageData.Directory.html">html.CoverageData.Directory</a></li>
+  <li><a href="../modules/html.CoverageData.File.html">html.CoverageData.File</a></li>
+  <li><a href="../modules/html.CoverageData.FileSystemEntry.html">html.CoverageData.FileSystemEntry</a></li>
+  <li><a href="../modules/html.CoverageData.Line.html">html.CoverageData.Line</a></li>
+  <li><a href="../modules/html.CoverageData.Total.html">html.CoverageData.Total</a></li>
+  <li><a href="../modules/html.CoverageData.Util.FilePathNormalizer.html">html.CoverageData.Util.FilePathNormalizer</a></li>
+  <li><a href="../modules/html.CoverageData.Util.FileSystemEntryCollection.html">html.CoverageData.Util.FileSystemEntryCollection</a></li>
+  <li><a href="../modules/html.CoverageData.Util.HitMissStatistics.html">html.CoverageData.Util.HitMissStatistics</a></li>
+  <li><a href="../modules/html.Writer.Path.OutputPathGenerator.html">html.Writer.Path.OutputPathGenerator</a></li>
+  <li><a href="../modules/html.Writer.Template.AbsoluteTemplateDirectoryPathFinder.html">html.Writer.Template.AbsoluteTemplateDirectoryPathFinder</a></li>
+  <li><a href="../modules/html.Writer.Template.TemplateFileCopier.html">html.Writer.Template.TemplateFileCopier</a></li>
+  <li><a href="../modules/html.Writer.Template.TemplateWriter.html">html.Writer.Template.TemplateWriter</a></li>
+  <li><a href="../modules/html.Writer.TemplateData.Directory.html">html.Writer.TemplateData.Directory</a></li>
+  <li><a href="../modules/html.Writer.TemplateData.File.html">html.Writer.TemplateData.File</a></li>
+  <li><strong>html.Writer.TemplateData.FileSystemEntry</strong></li>
+  <li><a href="../modules/html.Writer.TemplateData.HitMissStatistics.html">html.Writer.TemplateData.HitMissStatistics</a></li>
+  <li><a href="../modules/html.Writer.TemplateData.Line.html">html.Writer.TemplateData.Line</a></li>
+  <li><a href="../modules/html.Writer.TemplateData.TemplateDataFactory.html">html.Writer.TemplateData.TemplateDataFactory</a></li>
+  <li><a href="../modules/html.Writer.TemplateData.Total.html">html.Writer.TemplateData.Total</a></li>
+  <li><a href="../modules/html.Writer.Writer.html">html.Writer.Writer</a></li>
+  <li><a href="../modules/reporter.html.html">reporter.html</a></li>
+</ul>
+
+</div>
+
+<div id="content">
+
+<h1>Module <code>html.Writer.TemplateData.FileSystemEntry</code></h1>
+<p></p>
+<p></p>
+    <h3>Info:</h3>
+    <ul>
+        <li><strong>Copyright</strong>: 2020 wesen <wesen-ac@web.de></li>
+        <li><strong>Release</strong>: 0.1</li>
+        <li><strong>License</strong>: MIT</li>
+        <li><strong>Author</strong>: wesen</li>
+    </ul>
+
+
+<h2><a href="#Class_FileSystemEntry">Class FileSystemEntry </a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" ><a href="#FileSystemEntry.fileSystemEntryCoverageData">FileSystemEntry.fileSystemEntryCoverageData</a></td>
+	<td class="summary">The raw FileSystemEntry coverage data</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#FileSystemEntry.rootDirectoryTemplateData">FileSystemEntry.rootDirectoryTemplateData</a></td>
+	<td class="summary">The template data of the root directory
+ This is used to calculate the relative path to the root directory</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#FileSystemEntry.outputPathGenerator">FileSystemEntry.outputPathGenerator</a></td>
+	<td class="summary">The output path generator</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#FileSystemEntry.templateDataFactory">FileSystemEntry.templateDataFactory</a></td>
+	<td class="summary">The TemplateData factory</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#FileSystemEntry:new">FileSystemEntry:new (_fileSystemEntryCoverageData, _rootDirectoryTemplateData, _outputPathGenerator, _templateDataFactory)</a></td>
+	<td class="summary">FileSystemEntry constructor.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#FileSystemEntry:getFileSystemEntryCoverageData">FileSystemEntry:getFileSystemEntryCoverageData ()</a></td>
+	<td class="summary">Returns the raw FileSystemEntry coverage data.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#FileSystemEntry:toTemplateValues">FileSystemEntry:toTemplateValues ()</a></td>
+	<td class="summary">Generates and returns a regular table that contains all template data that is required to
+ visualize the raw FileSystemEntry coverage data.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#FileSystemEntry:getRelativePathToRoot">FileSystemEntry:getRelativePathToRoot ()</a></td>
+	<td class="summary">Returns the relative path from the file system entry to the root directory.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#FileSystemEntry:getRelativePathFrom">FileSystemEntry:getRelativePathFrom (_fileSystemEntryTemplateData, _includeBaseName)</a></td>
+	<td class="summary">Returns the relative path from another file system entry to this file system entry.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#FileSystemEntry:getReportTargetName">FileSystemEntry:getReportTargetName ()</a></td>
+	<td class="summary">Returns the report target name.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#FileSystemEntry:getPathPartTemplateDataObjects">FileSystemEntry:getPathPartTemplateDataObjects ()</a></td>
+	<td class="summary">Returns the Directory template data objects for all path parts of the file system entry
+ including the root directory.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#FileSystemEntry:getBaseName">FileSystemEntry:getBaseName ()</a></td>
+	<td class="summary">Returns the base name of the file system entry.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#FileSystemEntry:getHitMissStatistics">FileSystemEntry:getHitMissStatistics ()</a></td>
+	<td class="summary">Returns the hit/miss statistics of the file system entry.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#FileSystemEntry:generatePathPartTemplateValues">FileSystemEntry:generatePathPartTemplateValues ()</a></td>
+	<td class="summary">Generates and returns a regular table that contains all data that is required
+ to visualize the path parts.</td>
+	</tr>
+</table>
+
+<br/>
+<br/>
+
+
+    <h2 class="section-header has-description"><a name="Class_FileSystemEntry"></a>Class FileSystemEntry </h2>
+
+          <div class="section-description">
+          Base class for coverages of file system entries (directories or files).
+          </div>
+    <dl class="function">
+    <dt>
+    <a name = "FileSystemEntry.fileSystemEntryCoverageData"></a>
+    <strong>FileSystemEntry.fileSystemEntryCoverageData</strong>
+    </dt>
+    <dd>
+    The raw FileSystemEntry coverage data
+
+
+    <ul>
+        <li><span class="parameter">fileSystemEntryCoverageData</span>
+            <span class="types"><span class="type">CoverageData.FileSystemEntry</span></span>
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "FileSystemEntry.rootDirectoryTemplateData"></a>
+    <strong>FileSystemEntry.rootDirectoryTemplateData</strong>
+    </dt>
+    <dd>
+    The template data of the root directory
+ This is used to calculate the relative path to the root directory
+
+
+    <ul>
+        <li><span class="parameter">rootDirectoryTemplateData</span>
+            <span class="types"><span class="type">Directory</span></span>
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "FileSystemEntry.outputPathGenerator"></a>
+    <strong>FileSystemEntry.outputPathGenerator</strong>
+    </dt>
+    <dd>
+    The output path generator
+
+
+    <ul>
+        <li><span class="parameter">outputPathGenerator</span>
+            <span class="types"><span class="type">OutputPathGenerator</span></span>
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "FileSystemEntry.templateDataFactory"></a>
+    <strong>FileSystemEntry.templateDataFactory</strong>
+    </dt>
+    <dd>
+    The TemplateData factory
+
+
+    <ul>
+        <li><span class="parameter">templateDataFactory</span>
+            <span class="types"><span class="type">TemplateDataFactory</span></span>
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "FileSystemEntry:new"></a>
+    <strong>FileSystemEntry:new (_fileSystemEntryCoverageData, _rootDirectoryTemplateData, _outputPathGenerator, _templateDataFactory)</strong>
+    </dt>
+    <dd>
+    FileSystemEntry constructor.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">_fileSystemEntryCoverageData</span>
+            <span class="types"><span class="type">CoverageData.FileSystemEntry</span></span>
+         The raw FileSystemEntry coverage data
+        </li>
+        <li><span class="parameter">_rootDirectoryTemplateData</span>
+            <span class="types"><span class="type">Directory</span></span>
+         The template data of the root directory
+        </li>
+        <li><span class="parameter">_outputPathGenerator</span>
+            <span class="types"><span class="type">OutputPathGenerator</span></span>
+         The output path generator
+        </li>
+        <li><span class="parameter">_templateDataFactory</span>
+            <span class="types"><span class="type">TemplateDataFactory</span></span>
+         The TemplateData factory
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "FileSystemEntry:getFileSystemEntryCoverageData"></a>
+    <strong>FileSystemEntry:getFileSystemEntryCoverageData ()</strong>
+    </dt>
+    <dd>
+    Returns the raw FileSystemEntry coverage data.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">CoverageData.FileSystemEntry</span></span>
+        The raw FileSystemEntry coverage data
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "FileSystemEntry:toTemplateValues"></a>
+    <strong>FileSystemEntry:toTemplateValues ()</strong>
+    </dt>
+    <dd>
+    Generates and returns a regular table that contains all template data that is required to
+ visualize the raw FileSystemEntry coverage data.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+        The template values
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "FileSystemEntry:getRelativePathToRoot"></a>
+    <strong>FileSystemEntry:getRelativePathToRoot ()</strong>
+    </dt>
+    <dd>
+    Returns the relative path from the file system entry to the root directory.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+        The relative path to the root directory
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "FileSystemEntry:getRelativePathFrom"></a>
+    <strong>FileSystemEntry:getRelativePathFrom (_fileSystemEntryTemplateData, _includeBaseName)</strong>
+    </dt>
+    <dd>
+    Returns the relative path from another file system entry to this file system entry.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">_fileSystemEntryTemplateData</span>
+            <span class="types"><a class="type" href="../modules/html.Writer.TemplateData.FileSystemEntry.html#FileSystemEntry">FileSystemEntry</a></span>
+         The other file system entry
+        </li>
+        <li><span class="parameter">_includeBaseName</span>
+            <span class="types"><span class="type">bool</span></span>
+         True to include the base name in the relative path, false otherwise
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+        The relative path from the other file system entry to this file system entry
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "FileSystemEntry:getReportTargetName"></a>
+    <strong>FileSystemEntry:getReportTargetName ()</strong>
+    </dt>
+    <dd>
+    Returns the report target name.
+ This is an abstract method that must be implemented by child classes.
+
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+        The report target name
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "FileSystemEntry:getPathPartTemplateDataObjects"></a>
+    <strong>FileSystemEntry:getPathPartTemplateDataObjects ()</strong>
+    </dt>
+    <dd>
+    Returns the Directory template data objects for all path parts of the file system entry
+ including the root directory.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">Directory[]</span></span>
+        The Directory template data objects for all path parts
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "FileSystemEntry:getBaseName"></a>
+    <strong>FileSystemEntry:getBaseName ()</strong>
+    </dt>
+    <dd>
+    Returns the base name of the file system entry.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+        The base name
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "FileSystemEntry:getHitMissStatistics"></a>
+    <strong>FileSystemEntry:getHitMissStatistics ()</strong>
+    </dt>
+    <dd>
+    Returns the hit/miss statistics of the file system entry.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">HitMissStatistics</span></span>
+        The hit/miss statistics
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "FileSystemEntry:generatePathPartTemplateValues"></a>
+    <strong>FileSystemEntry:generatePathPartTemplateValues ()</strong>
+    </dt>
+    <dd>
+    Generates and returns a regular table that contains all data that is required
+ to visualize the path parts.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table[]</a></span>
+        The template values
+    </ol>
+
+
+
+
+</dd>
+</dl>
+
+
+</div> <!-- id="content" -->
+</div> <!-- id="main" -->
+<div id="about">
+<i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
+<i style="float:right;">Last updated 2020-05-30 15:03:14 </i>
+</div> <!-- id="about" -->
+</div> <!-- id="container" -->
+</body>
+</html>

@@ -1,0 +1,265 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<head>
+    <title>luacov-html documentation</title>
+    <link rel="stylesheet" href="../ldoc.css" type="text/css" />
+</head>
+<body>
+
+<div id="container">
+
+<div id="product">
+	<div id="product_logo"></div>
+	<div id="product_name"><big><b></b></big></div>
+	<div id="product_description"></div>
+</div> <!-- id="product" -->
+
+
+<div id="main">
+
+
+<!-- Menu -->
+
+<div id="navigation">
+<br/>
+<h1>luacov-html</h1>
+
+<ul>
+  <li><a href="../index.html">Index</a></li>
+</ul>
+
+<h2>Contents</h2>
+<ul>
+<li><a href="#Class_TemplateWriter">Class TemplateWriter </a></li>
+</ul>
+
+
+<h2>Modules</h2>
+<ul class="nowrap">
+  <li><a href="../modules/html.Configuration.html">html.Configuration</a></li>
+  <li><a href="../modules/html.CoverageData.Directory.html">html.CoverageData.Directory</a></li>
+  <li><a href="../modules/html.CoverageData.File.html">html.CoverageData.File</a></li>
+  <li><a href="../modules/html.CoverageData.FileSystemEntry.html">html.CoverageData.FileSystemEntry</a></li>
+  <li><a href="../modules/html.CoverageData.Line.html">html.CoverageData.Line</a></li>
+  <li><a href="../modules/html.CoverageData.Total.html">html.CoverageData.Total</a></li>
+  <li><a href="../modules/html.CoverageData.Util.FilePathNormalizer.html">html.CoverageData.Util.FilePathNormalizer</a></li>
+  <li><a href="../modules/html.CoverageData.Util.FileSystemEntryCollection.html">html.CoverageData.Util.FileSystemEntryCollection</a></li>
+  <li><a href="../modules/html.CoverageData.Util.HitMissStatistics.html">html.CoverageData.Util.HitMissStatistics</a></li>
+  <li><a href="../modules/html.Writer.Path.OutputPathGenerator.html">html.Writer.Path.OutputPathGenerator</a></li>
+  <li><a href="../modules/html.Writer.Template.AbsoluteTemplateDirectoryPathFinder.html">html.Writer.Template.AbsoluteTemplateDirectoryPathFinder</a></li>
+  <li><a href="../modules/html.Writer.Template.TemplateFileCopier.html">html.Writer.Template.TemplateFileCopier</a></li>
+  <li><strong>html.Writer.Template.TemplateWriter</strong></li>
+  <li><a href="../modules/html.Writer.TemplateData.Directory.html">html.Writer.TemplateData.Directory</a></li>
+  <li><a href="../modules/html.Writer.TemplateData.File.html">html.Writer.TemplateData.File</a></li>
+  <li><a href="../modules/html.Writer.TemplateData.FileSystemEntry.html">html.Writer.TemplateData.FileSystemEntry</a></li>
+  <li><a href="../modules/html.Writer.TemplateData.HitMissStatistics.html">html.Writer.TemplateData.HitMissStatistics</a></li>
+  <li><a href="../modules/html.Writer.TemplateData.Line.html">html.Writer.TemplateData.Line</a></li>
+  <li><a href="../modules/html.Writer.TemplateData.TemplateDataFactory.html">html.Writer.TemplateData.TemplateDataFactory</a></li>
+  <li><a href="../modules/html.Writer.TemplateData.Total.html">html.Writer.TemplateData.Total</a></li>
+  <li><a href="../modules/html.Writer.Writer.html">html.Writer.Writer</a></li>
+  <li><a href="../modules/reporter.html.html">reporter.html</a></li>
+</ul>
+
+</div>
+
+<div id="content">
+
+<h1>Module <code>html.Writer.Template.TemplateWriter</code></h1>
+<p></p>
+<p></p>
+    <h3>Info:</h3>
+    <ul>
+        <li><strong>Copyright</strong>: 2020 wesen <wesen-ac@web.de></li>
+        <li><strong>Release</strong>: 0.1</li>
+        <li><strong>License</strong>: MIT</li>
+        <li><strong>Author</strong>: wesen</li>
+    </ul>
+
+
+<h2><a href="#Class_TemplateWriter">Class TemplateWriter </a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" ><a href="#TemplateWriter.absoluteTemplateDirectoryPath">TemplateWriter.absoluteTemplateDirectoryPath</a></td>
+	<td class="summary">The absolute path to the "templates" directory</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#TemplateWriter.sharedTemplateValues">TemplateWriter.sharedTemplateValues</a></td>
+	<td class="summary">The template values that will be added to all template value tables</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#TemplateWriter:new">TemplateWriter:new ()</a></td>
+	<td class="summary">TemplateWriter constructor.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#TemplateWriter:addSharedTemplateValues">TemplateWriter:addSharedTemplateValues (_sharedTemplateValues)</a></td>
+	<td class="summary">Adds additional template values to the shared template values.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#TemplateWriter:writeTemplate">TemplateWriter:writeTemplate (_outputFilePath, _templateName, _templateValues)</a></td>
+	<td class="summary">Renders a template and writes the result to a specified output file path.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#TemplateWriter:renderTemplate">TemplateWriter:renderTemplate (_templateName, _templateValues)</a></td>
+	<td class="summary">Renders a template and returns the result.</td>
+	</tr>
+</table>
+
+<br/>
+<br/>
+
+
+    <h2 class="section-header has-description"><a name="Class_TemplateWriter"></a>Class TemplateWriter </h2>
+
+          <div class="section-description">
+          Renders templates and writes the results to specified file paths.
+          </div>
+    <dl class="function">
+    <dt>
+    <a name = "TemplateWriter.absoluteTemplateDirectoryPath"></a>
+    <strong>TemplateWriter.absoluteTemplateDirectoryPath</strong>
+    </dt>
+    <dd>
+    The absolute path to the "templates" directory
+
+
+    <ul>
+        <li><span class="parameter">absoluteTemplateDirectoryPath</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "TemplateWriter.sharedTemplateValues"></a>
+    <strong>TemplateWriter.sharedTemplateValues</strong>
+    </dt>
+    <dd>
+    The template values that will be added to all template value tables
+
+
+    <ul>
+        <li><span class="parameter">sharedTemplateValues</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "TemplateWriter:new"></a>
+    <strong>TemplateWriter:new ()</strong>
+    </dt>
+    <dd>
+    TemplateWriter constructor.
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "TemplateWriter:addSharedTemplateValues"></a>
+    <strong>TemplateWriter:addSharedTemplateValues (_sharedTemplateValues)</strong>
+    </dt>
+    <dd>
+    Adds additional template values to the shared template values.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">_sharedTemplateValues</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+         The shared template values to add
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "TemplateWriter:writeTemplate"></a>
+    <strong>TemplateWriter:writeTemplate (_outputFilePath, _templateName, _templateValues)</strong>
+    </dt>
+    <dd>
+    Renders a template and writes the result to a specified output file path.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">_outputFilePath</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         The output file path to write the result to
+        </li>
+        <li><span class="parameter">_templateName</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         The name of the template without the ".tpl" suffix
+        </li>
+        <li><span class="parameter">_templateValues</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+         The template values to render the template with
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "TemplateWriter:renderTemplate"></a>
+    <strong>TemplateWriter:renderTemplate (_templateName, _templateValues)</strong>
+    </dt>
+    <dd>
+    Renders a template and returns the result.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">_templateName</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         The name of the template without the ".tpl" suffix
+        </li>
+        <li><span class="parameter">_templateValues</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+         The template values to render the template with
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+        The rendered template
+    </ol>
+
+
+
+
+</dd>
+</dl>
+
+
+</div> <!-- id="content" -->
+</div> <!-- id="main" -->
+<div id="about">
+<i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
+<i style="float:right;">Last updated 2020-05-30 15:03:14 </i>
+</div> <!-- id="about" -->
+</div> <!-- id="container" -->
+</body>
+</html>

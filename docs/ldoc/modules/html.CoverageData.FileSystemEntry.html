@@ -1,0 +1,378 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<head>
+    <title>luacov-html documentation</title>
+    <link rel="stylesheet" href="../ldoc.css" type="text/css" />
+</head>
+<body>
+
+<div id="container">
+
+<div id="product">
+	<div id="product_logo"></div>
+	<div id="product_name"><big><b></b></big></div>
+	<div id="product_description"></div>
+</div> <!-- id="product" -->
+
+
+<div id="main">
+
+
+<!-- Menu -->
+
+<div id="navigation">
+<br/>
+<h1>luacov-html</h1>
+
+<ul>
+  <li><a href="../index.html">Index</a></li>
+</ul>
+
+<h2>Contents</h2>
+<ul>
+<li><a href="#Class_FileSystemEntry">Class FileSystemEntry </a></li>
+</ul>
+
+
+<h2>Modules</h2>
+<ul class="nowrap">
+  <li><a href="../modules/html.Configuration.html">html.Configuration</a></li>
+  <li><a href="../modules/html.CoverageData.Directory.html">html.CoverageData.Directory</a></li>
+  <li><a href="../modules/html.CoverageData.File.html">html.CoverageData.File</a></li>
+  <li><strong>html.CoverageData.FileSystemEntry</strong></li>
+  <li><a href="../modules/html.CoverageData.Line.html">html.CoverageData.Line</a></li>
+  <li><a href="../modules/html.CoverageData.Total.html">html.CoverageData.Total</a></li>
+  <li><a href="../modules/html.CoverageData.Util.FilePathNormalizer.html">html.CoverageData.Util.FilePathNormalizer</a></li>
+  <li><a href="../modules/html.CoverageData.Util.FileSystemEntryCollection.html">html.CoverageData.Util.FileSystemEntryCollection</a></li>
+  <li><a href="../modules/html.CoverageData.Util.HitMissStatistics.html">html.CoverageData.Util.HitMissStatistics</a></li>
+  <li><a href="../modules/html.Writer.Path.OutputPathGenerator.html">html.Writer.Path.OutputPathGenerator</a></li>
+  <li><a href="../modules/html.Writer.Template.AbsoluteTemplateDirectoryPathFinder.html">html.Writer.Template.AbsoluteTemplateDirectoryPathFinder</a></li>
+  <li><a href="../modules/html.Writer.Template.TemplateFileCopier.html">html.Writer.Template.TemplateFileCopier</a></li>
+  <li><a href="../modules/html.Writer.Template.TemplateWriter.html">html.Writer.Template.TemplateWriter</a></li>
+  <li><a href="../modules/html.Writer.TemplateData.Directory.html">html.Writer.TemplateData.Directory</a></li>
+  <li><a href="../modules/html.Writer.TemplateData.File.html">html.Writer.TemplateData.File</a></li>
+  <li><a href="../modules/html.Writer.TemplateData.FileSystemEntry.html">html.Writer.TemplateData.FileSystemEntry</a></li>
+  <li><a href="../modules/html.Writer.TemplateData.HitMissStatistics.html">html.Writer.TemplateData.HitMissStatistics</a></li>
+  <li><a href="../modules/html.Writer.TemplateData.Line.html">html.Writer.TemplateData.Line</a></li>
+  <li><a href="../modules/html.Writer.TemplateData.TemplateDataFactory.html">html.Writer.TemplateData.TemplateDataFactory</a></li>
+  <li><a href="../modules/html.Writer.TemplateData.Total.html">html.Writer.TemplateData.Total</a></li>
+  <li><a href="../modules/html.Writer.Writer.html">html.Writer.Writer</a></li>
+  <li><a href="../modules/reporter.html.html">reporter.html</a></li>
+</ul>
+
+</div>
+
+<div id="content">
+
+<h1>Module <code>html.CoverageData.FileSystemEntry</code></h1>
+<p></p>
+<p></p>
+    <h3>Info:</h3>
+    <ul>
+        <li><strong>Copyright</strong>: 2020 wesen <wesen-ac@web.de></li>
+        <li><strong>Release</strong>: 0.1</li>
+        <li><strong>License</strong>: MIT</li>
+        <li><strong>Author</strong>: wesen</li>
+    </ul>
+
+
+<h2><a href="#Class_FileSystemEntry">Class FileSystemEntry </a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" ><a href="#FileSystemEntry.baseName">FileSystemEntry.baseName</a></td>
+	<td class="summary">The base name of the file system entry</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#FileSystemEntry.parentDirectoryCoverageData">FileSystemEntry.parentDirectoryCoverageData</a></td>
+	<td class="summary">The coverage data of the parent directory</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#FileSystemEntry.hitMissStatistics">FileSystemEntry.hitMissStatistics</a></td>
+	<td class="summary">The hit/miss statistics for the file system entry</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#FileSystemEntry:new">FileSystemEntry:new (_baseName, _parentDirectoryCoverageData)</a></td>
+	<td class="summary">FileSystemEntry constructor.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#FileSystemEntry:getBaseName">FileSystemEntry:getBaseName ()</a></td>
+	<td class="summary">Returns the base name of the file system entry.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#FileSystemEntry:getParentDirectoryCoverageData">FileSystemEntry:getParentDirectoryCoverageData ()</a></td>
+	<td class="summary">Returns the coverage data of the parent directory.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#FileSystemEntry:getHitMissStatistics">FileSystemEntry:getHitMissStatistics ()</a></td>
+	<td class="summary">Returns the hit/miss statistics for the file system entry.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#FileSystemEntry:calculatePathDirectoryCoverages">FileSystemEntry:calculatePathDirectoryCoverages (_includeRoot, _includeSelf)</a></td>
+	<td class="summary">Calculates and returns all directory coverages between this file system entry and
+ the root coverage directory.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#FileSystemEntry:calculateFullPath">FileSystemEntry:calculateFullPath (_includeRoot)</a></td>
+	<td class="summary">Calculates and returns the full path of this file system entry relative from the root coverage directory.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#FileSystemEntry:addHitMissStatistics">FileSystemEntry:addHitMissStatistics (_numberOfHits, _numberOfMisses)</a></td>
+	<td class="summary">Adds hit/miss statistics to this FileSystemEntry and all of its parent directory coverages.</td>
+	</tr>
+</table>
+
+<br/>
+<br/>
+
+
+    <h2 class="section-header has-description"><a name="Class_FileSystemEntry"></a>Class FileSystemEntry </h2>
+
+          <div class="section-description">
+          Base class for coverages of file system entries (directories or files).
+          </div>
+    <dl class="function">
+    <dt>
+    <a name = "FileSystemEntry.baseName"></a>
+    <strong>FileSystemEntry.baseName</strong>
+    </dt>
+    <dd>
+    The base name of the file system entry
+
+
+    <ul>
+        <li><span class="parameter">baseName</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "FileSystemEntry.parentDirectoryCoverageData"></a>
+    <strong>FileSystemEntry.parentDirectoryCoverageData</strong>
+    </dt>
+    <dd>
+    The coverage data of the parent directory
+
+
+    <ul>
+        <li><span class="parameter">parentDirectoryCoverageData</span>
+            <span class="types"><span class="type">Directory</span></span>
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "FileSystemEntry.hitMissStatistics"></a>
+    <strong>FileSystemEntry.hitMissStatistics</strong>
+    </dt>
+    <dd>
+    The hit/miss statistics for the file system entry
+
+
+    <ul>
+        <li><span class="parameter">hitMissStatistics</span>
+            <span class="types"><span class="type">HitMissStatistics</span></span>
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "FileSystemEntry:new"></a>
+    <strong>FileSystemEntry:new (_baseName, _parentDirectoryCoverageData)</strong>
+    </dt>
+    <dd>
+    FileSystemEntry constructor.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">_baseName</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         The base name of the file system entry
+        </li>
+        <li><span class="parameter">_parentDirectoryCoverageData</span>
+            <span class="types"><span class="type">Directory</span></span>
+         The coverage data of the parent directory
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "FileSystemEntry:getBaseName"></a>
+    <strong>FileSystemEntry:getBaseName ()</strong>
+    </dt>
+    <dd>
+    Returns the base name of the file system entry.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+        The base name
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "FileSystemEntry:getParentDirectoryCoverageData"></a>
+    <strong>FileSystemEntry:getParentDirectoryCoverageData ()</strong>
+    </dt>
+    <dd>
+    Returns the coverage data of the parent directory.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">Directory</span></span>
+        The coverage data of the parent directory
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "FileSystemEntry:getHitMissStatistics"></a>
+    <strong>FileSystemEntry:getHitMissStatistics ()</strong>
+    </dt>
+    <dd>
+    Returns the hit/miss statistics for the file system entry.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">HitMissStatistics</span></span>
+        The hit/miss statistics
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "FileSystemEntry:calculatePathDirectoryCoverages"></a>
+    <strong>FileSystemEntry:calculatePathDirectoryCoverages (_includeRoot, _includeSelf)</strong>
+    </dt>
+    <dd>
+    Calculates and returns all directory coverages between this file system entry and
+ the root coverage directory.
+<p> The directory coverages are ordered ascending by their distance to the root coverage directory.
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">_includeRoot</span>
+            <span class="types"><span class="type">bool</span></span>
+         True to include the root directory coverage in the list, false otherwise
+        </li>
+        <li><span class="parameter">_includeSelf</span>
+            <span class="types"><span class="type">bool</span></span>
+         True to include this FileSystemEntry in the list (used for recursion)
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">Directory[]</span></span>
+        The directory coverages
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "FileSystemEntry:calculateFullPath"></a>
+    <strong>FileSystemEntry:calculateFullPath (_includeRoot)</strong>
+    </dt>
+    <dd>
+    Calculates and returns the full path of this file system entry relative from the root coverage directory.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">_includeRoot</span>
+            <span class="types"><span class="type">bool</span></span>
+         True to include the root directory in the path, false otherwise
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+        The calculated path
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "FileSystemEntry:addHitMissStatistics"></a>
+    <strong>FileSystemEntry:addHitMissStatistics (_numberOfHits, _numberOfMisses)</strong>
+    </dt>
+    <dd>
+    Adds hit/miss statistics to this FileSystemEntry and all of its parent directory coverages.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">_numberOfHits</span>
+            <span class="types"><span class="type">int</span></span>
+         The number of hit lines to add
+        </li>
+        <li><span class="parameter">_numberOfMisses</span>
+            <span class="types"><span class="type">int</span></span>
+         The number of missed lines to add
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+</dl>
+
+
+</div> <!-- id="content" -->
+</div> <!-- id="main" -->
+<div id="about">
+<i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
+<i style="float:right;">Last updated 2020-05-30 15:03:14 </i>
+</div> <!-- id="about" -->
+</div> <!-- id="container" -->
+</body>
+</html>

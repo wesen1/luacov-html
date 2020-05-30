@@ -1,0 +1,359 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<head>
+    <title>luacov-html documentation</title>
+    <link rel="stylesheet" href="../ldoc.css" type="text/css" />
+</head>
+<body>
+
+<div id="container">
+
+<div id="product">
+	<div id="product_logo"></div>
+	<div id="product_name"><big><b></b></big></div>
+	<div id="product_description"></div>
+</div> <!-- id="product" -->
+
+
+<div id="main">
+
+
+<!-- Menu -->
+
+<div id="navigation">
+<br/>
+<h1>luacov-html</h1>
+
+<ul>
+  <li><a href="../index.html">Index</a></li>
+</ul>
+
+<h2>Contents</h2>
+<ul>
+<li><a href="#Class_TemplateDataFactory">Class TemplateDataFactory </a></li>
+</ul>
+
+
+<h2>Modules</h2>
+<ul class="nowrap">
+  <li><a href="../modules/html.Configuration.html">html.Configuration</a></li>
+  <li><a href="../modules/html.CoverageData.Directory.html">html.CoverageData.Directory</a></li>
+  <li><a href="../modules/html.CoverageData.File.html">html.CoverageData.File</a></li>
+  <li><a href="../modules/html.CoverageData.FileSystemEntry.html">html.CoverageData.FileSystemEntry</a></li>
+  <li><a href="../modules/html.CoverageData.Line.html">html.CoverageData.Line</a></li>
+  <li><a href="../modules/html.CoverageData.Total.html">html.CoverageData.Total</a></li>
+  <li><a href="../modules/html.CoverageData.Util.FilePathNormalizer.html">html.CoverageData.Util.FilePathNormalizer</a></li>
+  <li><a href="../modules/html.CoverageData.Util.FileSystemEntryCollection.html">html.CoverageData.Util.FileSystemEntryCollection</a></li>
+  <li><a href="../modules/html.CoverageData.Util.HitMissStatistics.html">html.CoverageData.Util.HitMissStatistics</a></li>
+  <li><a href="../modules/html.Writer.Path.OutputPathGenerator.html">html.Writer.Path.OutputPathGenerator</a></li>
+  <li><a href="../modules/html.Writer.Template.AbsoluteTemplateDirectoryPathFinder.html">html.Writer.Template.AbsoluteTemplateDirectoryPathFinder</a></li>
+  <li><a href="../modules/html.Writer.Template.TemplateFileCopier.html">html.Writer.Template.TemplateFileCopier</a></li>
+  <li><a href="../modules/html.Writer.Template.TemplateWriter.html">html.Writer.Template.TemplateWriter</a></li>
+  <li><a href="../modules/html.Writer.TemplateData.Directory.html">html.Writer.TemplateData.Directory</a></li>
+  <li><a href="../modules/html.Writer.TemplateData.File.html">html.Writer.TemplateData.File</a></li>
+  <li><a href="../modules/html.Writer.TemplateData.FileSystemEntry.html">html.Writer.TemplateData.FileSystemEntry</a></li>
+  <li><a href="../modules/html.Writer.TemplateData.HitMissStatistics.html">html.Writer.TemplateData.HitMissStatistics</a></li>
+  <li><a href="../modules/html.Writer.TemplateData.Line.html">html.Writer.TemplateData.Line</a></li>
+  <li><strong>html.Writer.TemplateData.TemplateDataFactory</strong></li>
+  <li><a href="../modules/html.Writer.TemplateData.Total.html">html.Writer.TemplateData.Total</a></li>
+  <li><a href="../modules/html.Writer.Writer.html">html.Writer.Writer</a></li>
+  <li><a href="../modules/reporter.html.html">reporter.html</a></li>
+</ul>
+
+</div>
+
+<div id="content">
+
+<h1>Module <code>html.Writer.TemplateData.TemplateDataFactory</code></h1>
+<p></p>
+<p></p>
+    <h3>Info:</h3>
+    <ul>
+        <li><strong>Copyright</strong>: 2020 wesen <wesen-ac@web.de></li>
+        <li><strong>Release</strong>: 0.1</li>
+        <li><strong>License</strong>: MIT</li>
+        <li><strong>Author</strong>: wesen</li>
+    </ul>
+
+
+<h2><a href="#Class_TemplateDataFactory">Class TemplateDataFactory </a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" ><a href="#TemplateDataFactory.outputPathGenerator">TemplateDataFactory.outputPathGenerator</a></td>
+	<td class="summary">The output path generator</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#TemplateDataFactory.rootDirectoryTemplateData">TemplateDataFactory.rootDirectoryTemplateData</a></td>
+	<td class="summary">The template data for the root directory</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#TemplateDataFactory:new">TemplateDataFactory:new (_outputPathGenerator)</a></td>
+	<td class="summary">TemplateDataFactory constructor.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#TemplateDataFactory:setRootDirectory">TemplateDataFactory:setRootDirectory (_rootDirectoryCoverageData)</a></td>
+	<td class="summary">Sets the root directory that this factory should use for creating template data objects.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#TemplateDataFactory:createDirectoryTemplateData">TemplateDataFactory:createDirectoryTemplateData (_directoryCoverageData)</a></td>
+	<td class="summary">Creates and returns a Directory template data object from a Directory coverage data object.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#TemplateDataFactory:createFileTemplateData">TemplateDataFactory:createFileTemplateData (_fileCoverageData)</a></td>
+	<td class="summary">Creates and returns a File template data object from a File coverage data object.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#TemplateDataFactory:createTotalTemplateData">TemplateDataFactory:createTotalTemplateData (_totalCoverageData)</a></td>
+	<td class="summary">Creates and returns a Total template data object from a Total coverage data object.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#TemplateDataFactory:createHitMissStatisticsTemplateData">TemplateDataFactory:createHitMissStatisticsTemplateData (_hitMissStatisticsCoverageData)</a></td>
+	<td class="summary">Creates and returns a HitMissStatistics template data object from a HitMissStatistics coverage data object.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#TemplateDataFactory:createLineTemplateData">TemplateDataFactory:createLineTemplateData (_lineCoverageData)</a></td>
+	<td class="summary">Creates and returns a Line template data object from a Line coverage data object.</td>
+	</tr>
+</table>
+
+<br/>
+<br/>
+
+
+    <h2 class="section-header has-description"><a name="Class_TemplateDataFactory"></a>Class TemplateDataFactory </h2>
+
+          <div class="section-description">
+          Factory that should be used to create template data objects from coverage data objects.
+          </div>
+    <dl class="function">
+    <dt>
+    <a name = "TemplateDataFactory.outputPathGenerator"></a>
+    <strong>TemplateDataFactory.outputPathGenerator</strong>
+    </dt>
+    <dd>
+    The output path generator
+
+
+    <ul>
+        <li><span class="parameter">outputPathGenerator</span>
+            <span class="types"><span class="type">OutputPathGenerator</span></span>
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "TemplateDataFactory.rootDirectoryTemplateData"></a>
+    <strong>TemplateDataFactory.rootDirectoryTemplateData</strong>
+    </dt>
+    <dd>
+    The template data for the root directory
+
+
+    <ul>
+        <li><span class="parameter">rootDirectoryTemplateData</span>
+            <span class="types"><span class="type">Directory</span></span>
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "TemplateDataFactory:new"></a>
+    <strong>TemplateDataFactory:new (_outputPathGenerator)</strong>
+    </dt>
+    <dd>
+    TemplateDataFactory constructor.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">_outputPathGenerator</span>
+            <span class="types"><span class="type">OutputPathGenerator</span></span>
+         The output path generator
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "TemplateDataFactory:setRootDirectory"></a>
+    <strong>TemplateDataFactory:setRootDirectory (_rootDirectoryCoverageData)</strong>
+    </dt>
+    <dd>
+    Sets the root directory that this factory should use for creating template data objects.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">_rootDirectoryCoverageData</span>
+            <span class="types"><span class="type">CoverageData.Directory</span></span>
+         The coverage data of the root directory
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "TemplateDataFactory:createDirectoryTemplateData"></a>
+    <strong>TemplateDataFactory:createDirectoryTemplateData (_directoryCoverageData)</strong>
+    </dt>
+    <dd>
+    Creates and returns a Directory template data object from a Directory coverage data object.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">_directoryCoverageData</span>
+            <span class="types"><span class="type">CoverageData.Directory</span></span>
+         The data to create a Directory template data object from
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">Directory</span></span>
+        The created Directory template data object
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "TemplateDataFactory:createFileTemplateData"></a>
+    <strong>TemplateDataFactory:createFileTemplateData (_fileCoverageData)</strong>
+    </dt>
+    <dd>
+    Creates and returns a File template data object from a File coverage data object.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">_fileCoverageData</span>
+            <span class="types"><span class="type">CoverageData.File</span></span>
+         The data to create a File template data object from
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">File</span></span>
+        The created File template data object
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "TemplateDataFactory:createTotalTemplateData"></a>
+    <strong>TemplateDataFactory:createTotalTemplateData (_totalCoverageData)</strong>
+    </dt>
+    <dd>
+    Creates and returns a Total template data object from a Total coverage data object.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">_totalCoverageData</span>
+            <span class="types"><span class="type">CoverageData.Total</span></span>
+         The data to create a Total template data object from
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">Total</span></span>
+        The created Total template data object
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "TemplateDataFactory:createHitMissStatisticsTemplateData"></a>
+    <strong>TemplateDataFactory:createHitMissStatisticsTemplateData (_hitMissStatisticsCoverageData)</strong>
+    </dt>
+    <dd>
+    Creates and returns a HitMissStatistics template data object from a HitMissStatistics coverage data object.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">_hitMissStatisticsCoverageData</span>
+            <span class="types"><span class="type">CoverageData.HitMissStatistics</span></span>
+         The HitMissStatistics coverage data
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">HitMissStatistics</span></span>
+        The created HitMissStatistics template data object
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "TemplateDataFactory:createLineTemplateData"></a>
+    <strong>TemplateDataFactory:createLineTemplateData (_lineCoverageData)</strong>
+    </dt>
+    <dd>
+    Creates and returns a Line template data object from a Line coverage data object.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">_lineCoverageData</span>
+            <span class="types"><span class="type">CoverageData.Line</span></span>
+         The Line coverage data
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">Line</span></span>
+        The created Line template data object
+    </ol>
+
+
+
+
+</dd>
+</dl>
+
+
+</div> <!-- id="content" -->
+</div> <!-- id="main" -->
+<div id="about">
+<i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
+<i style="float:right;">Last updated 2020-05-30 15:03:14 </i>
+</div> <!-- id="about" -->
+</div> <!-- id="container" -->
+</body>
+</html>

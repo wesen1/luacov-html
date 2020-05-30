@@ -1,0 +1,357 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<head>
+    <title>luacov-html documentation</title>
+    <link rel="stylesheet" href="../ldoc.css" type="text/css" />
+</head>
+<body>
+
+<div id="container">
+
+<div id="product">
+	<div id="product_logo"></div>
+	<div id="product_name"><big><b></b></big></div>
+	<div id="product_description"></div>
+</div> <!-- id="product" -->
+
+
+<div id="main">
+
+
+<!-- Menu -->
+
+<div id="navigation">
+<br/>
+<h1>luacov-html</h1>
+
+<ul>
+  <li><a href="../index.html">Index</a></li>
+</ul>
+
+<h2>Contents</h2>
+<ul>
+<li><a href="#Class_HtmlReporter">Class HtmlReporter </a></li>
+</ul>
+
+
+<h2>Modules</h2>
+<ul class="nowrap">
+  <li><a href="../modules/html.Configuration.html">html.Configuration</a></li>
+  <li><a href="../modules/html.CoverageData.Directory.html">html.CoverageData.Directory</a></li>
+  <li><a href="../modules/html.CoverageData.File.html">html.CoverageData.File</a></li>
+  <li><a href="../modules/html.CoverageData.FileSystemEntry.html">html.CoverageData.FileSystemEntry</a></li>
+  <li><a href="../modules/html.CoverageData.Line.html">html.CoverageData.Line</a></li>
+  <li><a href="../modules/html.CoverageData.Total.html">html.CoverageData.Total</a></li>
+  <li><a href="../modules/html.CoverageData.Util.FilePathNormalizer.html">html.CoverageData.Util.FilePathNormalizer</a></li>
+  <li><a href="../modules/html.CoverageData.Util.FileSystemEntryCollection.html">html.CoverageData.Util.FileSystemEntryCollection</a></li>
+  <li><a href="../modules/html.CoverageData.Util.HitMissStatistics.html">html.CoverageData.Util.HitMissStatistics</a></li>
+  <li><a href="../modules/html.Writer.Path.OutputPathGenerator.html">html.Writer.Path.OutputPathGenerator</a></li>
+  <li><a href="../modules/html.Writer.Template.AbsoluteTemplateDirectoryPathFinder.html">html.Writer.Template.AbsoluteTemplateDirectoryPathFinder</a></li>
+  <li><a href="../modules/html.Writer.Template.TemplateFileCopier.html">html.Writer.Template.TemplateFileCopier</a></li>
+  <li><a href="../modules/html.Writer.Template.TemplateWriter.html">html.Writer.Template.TemplateWriter</a></li>
+  <li><a href="../modules/html.Writer.TemplateData.Directory.html">html.Writer.TemplateData.Directory</a></li>
+  <li><a href="../modules/html.Writer.TemplateData.File.html">html.Writer.TemplateData.File</a></li>
+  <li><a href="../modules/html.Writer.TemplateData.FileSystemEntry.html">html.Writer.TemplateData.FileSystemEntry</a></li>
+  <li><a href="../modules/html.Writer.TemplateData.HitMissStatistics.html">html.Writer.TemplateData.HitMissStatistics</a></li>
+  <li><a href="../modules/html.Writer.TemplateData.Line.html">html.Writer.TemplateData.Line</a></li>
+  <li><a href="../modules/html.Writer.TemplateData.TemplateDataFactory.html">html.Writer.TemplateData.TemplateDataFactory</a></li>
+  <li><a href="../modules/html.Writer.TemplateData.Total.html">html.Writer.TemplateData.Total</a></li>
+  <li><a href="../modules/html.Writer.Writer.html">html.Writer.Writer</a></li>
+  <li><strong>reporter.html</strong></li>
+</ul>
+
+</div>
+
+<div id="content">
+
+<h1>Module <code>reporter.html</code></h1>
+<p></p>
+<p></p>
+    <h3>Info:</h3>
+    <ul>
+        <li><strong>Copyright</strong>: 2020 wesen <wesen-ac@web.de></li>
+        <li><strong>Release</strong>: 0.1</li>
+        <li><strong>License</strong>: MIT</li>
+        <li><strong>Author</strong>: wesen</li>
+    </ul>
+
+
+<h2><a href="#Class_HtmlReporter">Class HtmlReporter </a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" ><a href="#HtmlReporter.totalCoverageData">HtmlReporter.totalCoverageData</a></td>
+	<td class="summary">The Total coverage data</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#HtmlReporter.writer">HtmlReporter.writer</a></td>
+	<td class="summary">The Writer that generates HTML files from the Total coverage data</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#HtmlReporter:new">HtmlReporter:new (_luacovConfigurationTable)</a></td>
+	<td class="summary">Reporter constructor.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#HtmlReporter:on_start">HtmlReporter:on_start ()</a></td>
+	<td class="summary">Stub method called before reporting.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#HtmlReporter:on_empty_line">HtmlReporter:on_empty_line (_filePath, _lineNumber, _line)</a></td>
+	<td class="summary">Stub method called for each empty source line and other lines that can't be hit.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#HtmlReporter:on_mis_line">HtmlReporter:on_mis_line (_filePath, _lineNumber, _line)</a></td>
+	<td class="summary">Stub method called for each missed source line.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#HtmlReporter:on_hit_line">HtmlReporter:on_hit_line (_filePath, _lineNumber, _line, _numberOfHits)</a></td>
+	<td class="summary">Stub method called for each hit source line.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#HtmlReporter:on_end_file">HtmlReporter:on_end_file (_filePath, _numberOfHits, _numberOfMisses)</a></td>
+	<td class="summary">Stub method called after a file has been processed.</td>
+	</tr>
+	<tr>
+	<td class="name" ><a href="#HtmlReporter:on_end">HtmlReporter:on_end ()</a></td>
+	<td class="summary">Stub method called after reporting.</td>
+	</tr>
+</table>
+
+<br/>
+<br/>
+
+
+    <h2 class="section-header has-description"><a name="Class_HtmlReporter"></a>Class HtmlReporter </h2>
+
+          <div class="section-description">
+          Luacov Reporter that generates HTML files to visualize the coverage of lines, files and directories.
+          </div>
+    <dl class="function">
+    <dt>
+    <a name = "HtmlReporter.totalCoverageData"></a>
+    <strong>HtmlReporter.totalCoverageData</strong>
+    </dt>
+    <dd>
+    The Total coverage data
+
+
+    <ul>
+        <li><span class="parameter">totalCoverageData</span>
+            <span class="types"><span class="type">CoverageData.Total</span></span>
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "HtmlReporter.writer"></a>
+    <strong>HtmlReporter.writer</strong>
+    </dt>
+    <dd>
+    The Writer that generates HTML files from the Total coverage data
+
+
+    <ul>
+        <li><span class="parameter">writer</span>
+            <span class="types"><span class="type">Writer</span></span>
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "HtmlReporter:new"></a>
+    <strong>HtmlReporter:new (_luacovConfigurationTable)</strong>
+    </dt>
+    <dd>
+    Reporter constructor.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">_luacovConfigurationTable</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+         The luacov configuration table
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">Reporter</span></span>
+        The HtmlReporter instance
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "HtmlReporter:on_start"></a>
+    <strong>HtmlReporter:on_start ()</strong>
+    </dt>
+    <dd>
+    Stub method called before reporting.
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "HtmlReporter:on_empty_line"></a>
+    <strong>HtmlReporter:on_empty_line (_filePath, _lineNumber, _line)</strong>
+    </dt>
+    <dd>
+    Stub method called for each empty source line and other lines that can't be hit.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">_filePath</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         The file path
+        </li>
+        <li><span class="parameter">_lineNumber</span>
+            <span class="types"><span class="type">int</span></span>
+         The line number of the line
+        </li>
+        <li><span class="parameter">_line</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         The content of the line
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "HtmlReporter:on_mis_line"></a>
+    <strong>HtmlReporter:on_mis_line (_filePath, _lineNumber, _line)</strong>
+    </dt>
+    <dd>
+    Stub method called for each missed source line.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">_filePath</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         The file path
+        </li>
+        <li><span class="parameter">_lineNumber</span>
+            <span class="types"><span class="type">int</span></span>
+         The line number of the line
+        </li>
+        <li><span class="parameter">_line</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         The content of the line
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "HtmlReporter:on_hit_line"></a>
+    <strong>HtmlReporter:on_hit_line (_filePath, _lineNumber, _line, _numberOfHits)</strong>
+    </dt>
+    <dd>
+    Stub method called for each hit source line.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">_filePath</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         The file path
+        </li>
+        <li><span class="parameter">_lineNumber</span>
+            <span class="types"><span class="type">int</span></span>
+         The line number of the line
+        </li>
+        <li><span class="parameter">_line</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         The content of the line
+        </li>
+        <li><span class="parameter">_numberOfHits</span>
+            <span class="types"><span class="type">int</span></span>
+         The number of times the line was executed
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "HtmlReporter:on_end_file"></a>
+    <strong>HtmlReporter:on_end_file (_filePath, _numberOfHits, _numberOfMisses)</strong>
+    </dt>
+    <dd>
+    Stub method called after a file has been processed.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">_filePath</span>
+            <span class="types"><a class="type" href="https://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         The file path
+        </li>
+        <li><span class="parameter">_numberOfHits</span>
+            <span class="types"><span class="type">int</span></span>
+         The total number of hits in the file
+        </li>
+        <li><span class="parameter">_numberOfMisses</span>
+            <span class="types"><span class="type">int</span></span>
+         The total number of misses in the file
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "HtmlReporter:on_end"></a>
+    <strong>HtmlReporter:on_end ()</strong>
+    </dt>
+    <dd>
+    Stub method called after reporting.
+
+
+
+
+
+
+
+</dd>
+</dl>
+
+
+</div> <!-- id="content" -->
+</div> <!-- id="main" -->
+<div id="about">
+<i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
+<i style="float:right;">Last updated 2020-05-30 15:03:14 </i>
+</div> <!-- id="about" -->
+</div> <!-- id="container" -->
+</body>
+</html>
