@@ -19,6 +19,25 @@ local Directory = FileSystemEntry:extend()
 -- Public Methods
 
 ---
+-- Directory constructor.
+--
+-- @tparam CoverageData.FileSystemEntry _fileSystemEntryCoverageData The raw FileSystemEntry coverage data
+-- @tparam Directory _rootDirectoryTemplateData The template data of the root directory
+-- @tparam OutputPathGenerator _outputPathGenerator The output path generator
+-- @tparam TemplateDataFactory _templateDataFactory The TemplateData factory
+--
+function Directory:new(_fileSystemEntryCoverageData, _rootDirectoryTemplateData, _outputPathGenerator, _templateDataFactory)
+
+  FileSystemEntry.new(self, _fileSystemEntryCoverageData, _rootDirectoryTemplateData, _outputPathGenerator, _templateDataFactory)
+
+  if (self.rootDirectoryTemplateData == nil and
+      self.fileSystemEntryCoverageData:getParentDirectoryCoverageData() == nil) then
+    self.rootDirectoryTemplateData = self
+  end
+
+end
+
+---
 -- Generates and returns a regular table that contains all template values that are required to
 -- visualize the raw Directory coverage data.
 --

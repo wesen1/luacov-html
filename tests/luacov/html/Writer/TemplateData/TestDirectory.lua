@@ -26,6 +26,47 @@ TestDirectory.testClassPath = "luacov.html.Writer.TemplateData.Directory"
 -- Public Methods
 
 ---
+-- Checks that the relative path to the root directory can be returned as expected when no
+-- root directory template data is passed to the Directory's constructor.
+--
+function TestDirectory:testCanReturnRelativePathToRootIfRootDirectoryTemplateDataIsNil()
+
+  local Directory = self.testClass
+
+  local directory
+  self.fileSystemEntryCoverageDataMock.getParentDirectoryCoverageData
+                                      :should_be_called()
+                                      :and_will_return(nil)
+                                      :when(
+                                        function()
+                                          directory = Directory(
+                                            self.fileSystemEntryCoverageDataMock,
+                                            nil,
+                                            self.outputPathGeneratorMock,
+                                            self.templateDataFactoryMock
+                                          )
+                                        end
+                                      )
+
+  local relativePathToRoot
+  self.outputPathGeneratorMock.generateRelativePath
+                              :should_be_called_with(
+                                self.fileSystemEntryCoverageDataMock,
+                                self.fileSystemEntryCoverageDataMock,
+                                false
+                              )
+                              :and_will_return("./")
+                              :when(
+                                function()
+                                  relativePathToRoot = directory:getRelativePathToRoot()
+                                end
+                              )
+
+  self:assertEquals(relativePathToRoot, "./")
+
+end
+
+---
 -- Checks that the report target name can be returned as expected.
 --
 function TestDirectory:testCanReturnReportTargetName()
