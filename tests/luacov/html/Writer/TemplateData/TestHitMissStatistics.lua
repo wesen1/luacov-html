@@ -242,10 +242,14 @@ function TestHitMissStatistics:testCanBeConvertedToTemplateValues()
                                      end
                                    )
 
-  self:assertEquals(templateValues.numberOfHits, 120)
-  self:assertEquals(templateValues.numberOfMisses, 40)
-  self:assertEquals(templateValues.formattedHitPercentage, "75.00")
-  self:assertEquals(templateValues.hitPercentageStatusText, "medium")
+  local expectedTemplateValues = {
+    numberOfHits = 120,
+    numberOfMisses = 40,
+    formattedHitPercentage = "75.00",
+    hitPercentageStatusText = "medium"
+  }
+
+  self:assertEquals(templateValues, expectedTemplateValues)
 
 end
 

@@ -103,11 +103,12 @@ end
 --
 function Line:getCoverageTypeName()
 
-  if (self.lineCoverageData:getType() == LineCoverageData.TYPE_EMPTY) then
+  local lineCoverageType = self.lineCoverageData:getType()
+  if (lineCoverageType == LineCoverageData.TYPE_EMPTY) then
     return "empty"
-  elseif (self.lineCoverageData:getType() == LineCoverageData.TYPE_MISS) then
+  elseif (lineCoverageType == LineCoverageData.TYPE_MISS) then
     return "miss"
-  elseif (self.lineCoverageData:getType() == LineCoverageData.TYPE_HIT) then
+  elseif (lineCoverageType == LineCoverageData.TYPE_HIT) then
     return "hit"
   end
 
