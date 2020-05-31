@@ -185,7 +185,6 @@ function TestFile:testCanBeConvertedToTemplateValues()
       { name = "my_example", relativePath = "../" },
       { name = "dir", relativePath = "./" }
     },
-
     baseName = "Square.lua",
 
     hitMissStatistics = {
