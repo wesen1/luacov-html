@@ -19,5 +19,4 @@ install:
   - luarocks install wluaunit
 
 script:
-  - cd tests
-  - lua test-suite.lua
+  - tests/run-tests.sh
