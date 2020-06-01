@@ -45,9 +45,9 @@ HtmlReporter.writer = nil
 function HtmlReporter:new(_luacovConfigurationTable)
 
   local object, errorMessage = ReporterBase.new(self, _luacovConfigurationTable)
-	if not object then
-		return nil, errorMessage
-	end
+  if not object then
+    return nil, errorMessage
+  end
 
   -- Parse the configuration
   local configuration = Configuration(_luacovConfigurationTable)
@@ -56,7 +56,7 @@ function HtmlReporter:new(_luacovConfigurationTable)
   object.totalCoverageData = Total(configuration:getProjectName())
   object.totalCoverageWriter = Writer(configuration:getOutputDirectoryPath())
 
-	return object
+  return object
 
 end
 
@@ -125,9 +125,9 @@ end
 
 return {
 
-	HtmlReporter = HtmlReporter,
+  HtmlReporter = HtmlReporter,
 
-	report = function ()
-		return reporter.report(HtmlReporter)
-	end
+  report = function ()
+    return reporter.report(HtmlReporter)
+  end
 }

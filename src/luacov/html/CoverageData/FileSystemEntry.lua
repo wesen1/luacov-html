@@ -127,7 +127,7 @@ end
 function FileSystemEntry:calculateFullPath(_includeRoot)
 
   local pathDirectoryNames = {}
-  for _, directoryCoverage in ipairs(self:calculatePathDirectoryCoverages(_includeRoot)) do
+  for _, directoryCoverage in ipairs(self:calculatePathDirectoryCoverages(_includeRoot, false)) do
     table.insert(pathDirectoryNames, directoryCoverage:getBaseName())
   end
 
