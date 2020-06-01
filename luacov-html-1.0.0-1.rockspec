@@ -1,20 +1,20 @@
 package = "luacov-html"
-version = "0.0.1-1"
+version = "1.0.0-1"
 
 description = {
   summary = "HTML Reporter for LuaCov",
   detailed = [[
     luacov-html is a Reporter for LuaCov that generates HTML files to visualize the code coverage.
 
-    This is based on the html reporter from [luacov-multiple](https://github.com/to-kr/luacov-multiple).
+    This is based on the html reporter from luacov-multiple.
   ]],
   license = "MIT",
-  homepage = "https://github.com/wesen1/luacov-html"
+  homepage = "https://wesen1.github.io/luacov-html/"
 }
 
 source = {
   url = "git+https://github.com/wesen1/luacov-html.git",
-  tag = "v0.0.1"
+  tag = "v1.0.0"
 }
 
 dependencies = {
