@@ -29,10 +29,10 @@ require "pl.compat"
 
 --
 -- The lua unit test suite
--- Runs all tests from the "luacov" directory
+-- Runs all tests from the "unit" directory
 --
 local runner = TestRunner()
 
-runner:addTestDirectory("luacov")
+runner:addTestDirectory("unit")
       :enableCoverageAnalysis()
       :run()

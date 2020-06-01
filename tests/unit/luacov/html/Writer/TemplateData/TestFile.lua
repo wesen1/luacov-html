@@ -5,7 +5,7 @@
 -- @license MIT
 --
 
-local FileSystemEntryTestBase = require "tests.luacov.html.Writer.TemplateData.FileSystemEntryTestBase"
+local FileSystemEntryTestBase = require "tests.unit.luacov.html.Writer.TemplateData.FileSystemEntryTestBase"
 
 ---
 -- Checks that the TemplateData.File class works as expected.

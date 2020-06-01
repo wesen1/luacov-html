@@ -5,7 +5,7 @@
 -- @license MIT
 --
 
-local FileSystemEntryTestBase = require "tests.luacov.html.CoverageData.FileSystemEntryTestBase"
+local FileSystemEntryTestBase = require "tests.unit.luacov.html.CoverageData.FileSystemEntryTestBase"
 
 ---
 -- Checks that the CoverageData.Directory class works as expected.
