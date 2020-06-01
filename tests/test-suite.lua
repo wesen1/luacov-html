@@ -34,5 +34,11 @@ require "pl.compat"
 local runner = TestRunner()
 
 runner:addTestDirectory("unit")
+      :addTestDirectory(
+        "system",
+        {
+          "system/full%-example"
+        }
+      )
       :enableCoverageAnalysis()
       :run()
