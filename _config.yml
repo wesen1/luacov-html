@@ -1,1 +1,11 @@
 theme: jekyll-theme-cayman
+exclude:
+  - example
+  - src
+  - tests
+  - util
+  - .gitignore
+  - VagrantProvision.sh
+  - Vagrantfile
+  - config.ld
+  - luacov-html-0.0.1-1.rockspec
