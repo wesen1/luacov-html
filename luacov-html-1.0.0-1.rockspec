@@ -6,7 +6,7 @@ description = {
   detailed = [[
     luacov-html is a Reporter for LuaCov that generates HTML files to visualize the code coverage.
 
-    This is based on the html reporter from luacov-multiple.
+    This is based on the html reporter from [luacov-multiple](https://github.com/to-kr/luacov-multiple).
   ]],
   license = "MIT",
   homepage = "https://wesen1.github.io/luacov-html/"
