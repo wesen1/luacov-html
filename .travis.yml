@@ -1,0 +1,22 @@
+language: c
+
+env:
+  global:
+    - LUAROCKS=2.2.0
+  matrix:
+    - LUA=lua5.1
+    - LUA=lua5.2
+    - LUA=lua5.3
+
+before_install:
+  - source .travis/setenv_lua.sh
+
+install:
+  - luarocks install classic
+  - luarocks install penlight
+  - luarocks install luacov
+  - luarocks install lua-resty-template
+  - luarocks install wluaunit
+
+script:
+  - tests/run-tests.sh
