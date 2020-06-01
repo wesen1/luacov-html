@@ -1,3 +1,5 @@
 .vagrant
 example/tests/coverage-report
 luacov.report.out
+tests/system/empty-example/luacov-html
+tests/system/full-example/tests/coverage-report
