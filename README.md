@@ -9,7 +9,7 @@ This is based on the html reporter from [luacov-multiple](https://github.com/to-
 Example
 -------
 
-[![Example Coverage Report Overview](docs/images/coverage-report-example.png?raw=true "Optional Title")](https://wesen1.github.io/luacov-html/example-coverage-report/src/example/index.html)
+[![Example Coverage Report Overview](docs/images/coverage-report-example.png?raw=true "Optional Title")](https://wesen1.github.io/luacov-html/docs/example-coverage-report/src/example/index.html)
 
 Have a look at `example/tests/.luacov` for a fully configured example. </br>
 You can view a live version of the example coverage report [here](https://wesen1.github.io/luacov-html/docs/example-coverage-report/).
